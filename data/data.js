@@ -574,4 +574,251 @@ export const QUIZ_DATA = [
   },
 ];
 
-export const MATCH_DATA = [{}];
+export const MATCH_DATA = [
+  {
+    name: 'Football',
+    id: 'fo1',
+    levelQuestions: [
+      {
+        options: [
+          {
+            club: 'Liverpool',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/640px-Liverpool_FC.svg.png',
+          },
+          {
+            club: 'Real Madrid',
+            image:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvstryYp8XR5PpzQ1EbePtHWurZqEqHxRuow&s',
+          },
+          {
+            club: 'Manchester City',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/800px-Manchester_City_FC_badge.svg.png',
+          },
+        ],
+        answer: {trainer: 'Pep Guardiola', club: 'Manchester City'},
+      },
+      {
+        options: [
+          {
+            club: 'Inter Milan',
+            image:
+              'https://upload.wikimedia.org/wikipedia/uk/4/4d/FCInterMilan2021.png',
+          },
+          {
+            club: 'Liverpool',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/640px-Liverpool_FC.svg.png',
+          },
+          {
+            club: 'Chelsea',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png',
+          },
+        ],
+        answer: {trainer: 'Jürgen Klopp', club: 'Liverpool'},
+      },
+      {
+        options: [
+          {
+            club: 'Juventus',
+            image:
+              'https://imageio.forbes.com/i-forbesimg/media/lists/teams/juventus_416x416.jpg?format=jpg',
+          },
+          {
+            club: 'Real Madrid',
+            image:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvstryYp8XR5PpzQ1EbePtHWurZqEqHxRuow&s',
+          },
+          {
+            club: 'Bayern Munich',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/800px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png',
+          },
+        ],
+        answer: {trainer: 'Carlo Ancelotti', club: 'Real Madrid'},
+      },
+      {
+        options: [
+          {
+            club: 'Inter Milan',
+            image:
+              'https://upload.wikimedia.org/wikipedia/uk/4/4d/FCInterMilan2021.png',
+          },
+          {
+            club: 'Liverpool',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/640px-Liverpool_FC.svg.png',
+          },
+          {
+            club: 'Arsenal',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png',
+          },
+        ],
+        answer: {trainer: 'Mikel Arteta ', club: 'Arsenal'},
+      },
+      {
+        options: [
+          {
+            club: 'FC Barcelona',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png',
+          },
+          {
+            club: 'Atlético Madrid',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Atletico_Madrid_Logo_2024.svg/1200px-Atletico_Madrid_Logo_2024.svg.png',
+          },
+          {
+            club: 'Arsenal',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png',
+          },
+        ],
+        answer: {trainer: 'Xavi Hernández', club: 'FC Barcelona'},
+      },
+      {
+        options: [
+          {
+            club: 'Manchester City',
+            image:
+              'https://upload.wikimedia.org/wikipedia/uk/e/eb/Manchester_City_FC_badge.svg',
+          },
+          {
+            club: 'Atlético Madrid',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Atletico_Madrid_Logo_2024.svg/1200px-Atletico_Madrid_Logo_2024.svg.png',
+          },
+          {
+            club: 'Bayern Munich',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/800px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png',
+          },
+        ],
+        answer: {trainer: 'Thomas Tuchel', club: 'Bayern Munich'},
+      },
+      {
+        options: [
+          {
+            club: 'Manchester City',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/800px-Manchester_City_FC_badge.svg.png',
+          },
+          {
+            club: 'Inter Milan',
+            image:
+              'https://upload.wikimedia.org/wikipedia/uk/4/4d/FCInterMilan2021.png',
+          },
+          {
+            club: 'Juventus',
+            image:
+              'https://imageio.forbes.com/i-forbesimg/media/lists/teams/juventus_416x416.jpg?format=jpg',
+          },
+        ],
+        answer: {trainer: 'Simone Inzaghi', club: 'Inter Milan'},
+      },
+      {
+        options: [
+          {
+            club: 'Atlético Madrid',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Atletico_Madrid_Logo_2024.svg/1200px-Atletico_Madrid_Logo_2024.svg.png',
+          },
+          {
+            club: 'Juventus',
+            image:
+              'https://imageio.forbes.com/i-forbesimg/media/lists/teams/juventus_416x416.jpg?format=jpg',
+          },
+          {
+            club: 'Inter Milan',
+            image:
+              'https://upload.wikimedia.org/wikipedia/uk/4/4d/FCInterMilan2021.png',
+          },
+        ],
+        answer: {trainer: 'Diego Simeone', club: 'Atlético Madrid'},
+      },
+      {
+        options: [
+          {
+            club: 'FC Barcelona',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png',
+          },
+          {
+            club: 'Chelsea',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png',
+          },
+          {
+            club: 'Manchester City',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/800px-Manchester_City_FC_badge.svg.png',
+          },
+        ],
+        answer: {trainer: 'Mauricio Pochettino', club: 'Chelsea'},
+      },
+      {
+        options: [
+          {
+            club: 'Bayern Munich',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/800px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png',
+          },
+          {
+            club: 'Arsenal',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png',
+          },
+          {
+            club: 'Juventus',
+            image:
+              'https://imageio.forbes.com/i-forbesimg/media/lists/teams/juventus_416x416.jpg?format=jpg',
+          },
+        ],
+        answer: {trainer: 'Massimiliano Allegri', club: 'Juventus'},
+      },
+    ],
+  },
+  {
+    name: 'Basketball',
+    id: 'b1',
+    levelQuestions: [
+      {
+        options: ['', '', ''],
+        answer: '',
+      },
+    ],
+  },
+  {
+    name: 'Volleyball',
+    id: 'v1',
+    levelQuestions: [
+      {
+        options: ['', '', ''],
+        answer: '',
+      },
+    ],
+  },
+  {
+    name: 'Baseball',
+    id: 'ba1',
+    levelQuestions: [
+      {
+        options: ['', '', ''],
+        answer: '',
+      },
+    ],
+  },
+  {
+    name: 'Hockey',
+    id: 'ho1',
+    levelQuestions: [
+      {
+        options: ['', '', ''],
+        answer: '',
+      },
+    ],
+  },
+];
