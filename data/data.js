@@ -576,6 +576,7 @@ export const QUIZ_DATA = [
 
 export const MATCH_DATA = [
   {
+    task: 'Choose the right coach of football club ',
     name: 'Football',
     id: 'fo1',
     levelQuestions: [
@@ -597,7 +598,7 @@ export const MATCH_DATA = [
               'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/800px-Manchester_City_FC_badge.svg.png',
           },
         ],
-        answer: {trainer: 'Pep Guardiola', club: 'Manchester City'},
+        answer: {person: 'Pep Guardiola', club: 'Manchester City'},
       },
       {
         options: [
@@ -617,7 +618,7 @@ export const MATCH_DATA = [
               'https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png',
           },
         ],
-        answer: {trainer: 'Jürgen Klopp', club: 'Liverpool'},
+        answer: {person: 'Jürgen Klopp', club: 'Liverpool'},
       },
       {
         options: [
@@ -637,7 +638,7 @@ export const MATCH_DATA = [
               'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/800px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png',
           },
         ],
-        answer: {trainer: 'Carlo Ancelotti', club: 'Real Madrid'},
+        answer: {person: 'Carlo Ancelotti', club: 'Real Madrid'},
       },
       {
         options: [
@@ -657,7 +658,7 @@ export const MATCH_DATA = [
               'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png',
           },
         ],
-        answer: {trainer: 'Mikel Arteta ', club: 'Arsenal'},
+        answer: {person: 'Mikel Arteta ', club: 'Arsenal'},
       },
       {
         options: [
@@ -677,7 +678,7 @@ export const MATCH_DATA = [
               'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png',
           },
         ],
-        answer: {trainer: 'Xavi Hernández', club: 'FC Barcelona'},
+        answer: {person: 'Xavi Hernández', club: 'FC Barcelona'},
       },
       {
         options: [
@@ -697,7 +698,7 @@ export const MATCH_DATA = [
               'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/800px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png',
           },
         ],
-        answer: {trainer: 'Thomas Tuchel', club: 'Bayern Munich'},
+        answer: {person: 'Thomas Tuchel', club: 'Bayern Munich'},
       },
       {
         options: [
@@ -717,7 +718,7 @@ export const MATCH_DATA = [
               'https://imageio.forbes.com/i-forbesimg/media/lists/teams/juventus_416x416.jpg?format=jpg',
           },
         ],
-        answer: {trainer: 'Simone Inzaghi', club: 'Inter Milan'},
+        answer: {person: 'Simone Inzaghi', club: 'Inter Milan'},
       },
       {
         options: [
@@ -737,7 +738,7 @@ export const MATCH_DATA = [
               'https://upload.wikimedia.org/wikipedia/uk/4/4d/FCInterMilan2021.png',
           },
         ],
-        answer: {trainer: 'Diego Simeone', club: 'Atlético Madrid'},
+        answer: {person: 'Diego Simeone', club: 'Atlético Madrid'},
       },
       {
         options: [
@@ -757,7 +758,7 @@ export const MATCH_DATA = [
               'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/800px-Manchester_City_FC_badge.svg.png',
           },
         ],
-        answer: {trainer: 'Mauricio Pochettino', club: 'Chelsea'},
+        answer: {person: 'Mauricio Pochettino', club: 'Chelsea'},
       },
       {
         options: [
@@ -777,17 +778,94 @@ export const MATCH_DATA = [
               'https://imageio.forbes.com/i-forbesimg/media/lists/teams/juventus_416x416.jpg?format=jpg',
           },
         ],
-        answer: {trainer: 'Massimiliano Allegri', club: 'Juventus'},
+        answer: {person: '', club: 'Juventus'},
       },
     ],
   },
   {
+    task: 'Choose the right player of football club',
     name: 'Basketball',
     id: 'b1',
     levelQuestions: [
       {
-        options: ['', '', ''],
-        answer: '',
+        options: [
+          {club: 'Boston Celtics', image: 'https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg'},
+          {club: 'Los Angeles Lakers', image: 'https://seeklogo.com/images/L/los-angeles-lakers-logo-805BBEB14F-seeklogo.com.png'},
+          {club: 'Phoenix Suns', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhyZdwUEaD675rVLNGOx7XpNCkXTeHiGf0aw&s'},
+        ],
+        answer: {person: 'LeBron James', club: 'Los Angeles Lakers'},
+      },
+      {
+        options: [
+          {club: 'Golden State Warriors', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxfY3OJxOojGPzBhhRp5tJ8OmrzNuvY0f_0Q&s'},
+          {club: 'Denver Nuggets', image: 'https://upload.wikimedia.org/wikipedia/en/7/76/Denver_Nuggets.svg'},
+          {club: 'Milwaukee Bucks', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Milwaukee_Bucks_logo.svg/640px-Milwaukee_Bucks_logo.svg.png'},
+        ],
+        answer: {person: 'Stephen Curry', club: 'Golden State Warriors'},
+      },
+      {
+        options: [
+          {club: 'Philadelphia 76ers', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Philadelphia_76ers_logo.svg/1200px-Philadelphia_76ers_logo.svg.png'},
+          {club: 'Miami Heat', image: 'https://upload.wikimedia.org/wikipedia/ru/f/fb/Miami_Heat_logo.svg'},
+          {club: 'Phoenix Suns', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhyZdwUEaD675rVLNGOx7XpNCkXTeHiGf0aw&s'},
+        ],
+        answer: {person: 'Kevin Durant', club: 'Phoenix Suns'},
+      },
+      {
+        options: [
+          {club: 'Denver Nuggets', image: 'https://upload.wikimedia.org/wikipedia/en/7/76/Denver_Nuggets.svg'},
+          {club: 'Dallas Mavericks', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Dallas_Mavericks_logo.svg/640px-Dallas_Mavericks_logo.svg.png'},
+          {club: 'Boston Celtics', image: 'https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg'},
+        ],
+        answer: {person: 'Luka Dončić', club: 'Dallas Mavericks'},
+      },
+      {
+        options: [
+          {club: 'Los Angeles Clippers', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Los_Angeles_Clippers_%282024%29.svg/1200px-Los_Angeles_Clippers_%282024%29.svg.png'},
+          {club: 'Philadelphia 76ers', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Philadelphia_76ers_logo.svg/1200px-Philadelphia_76ers_logo.svg.png'},
+          {club: 'Milwaukee Bucks', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Milwaukee_Bucks_logo.svg/640px-Milwaukee_Bucks_logo.svg.png'},
+        ],
+        answer: {person: 'Giannis Antetokounmpo', club: 'Milwaukee Bucks'},
+      },
+      {
+        options: [
+          {club: 'Boston Celtics', image: 'https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg'},
+          {club: 'Denver Nuggets', image: 'https://upload.wikimedia.org/wikipedia/en/7/76/Denver_Nuggets.svg'},
+          {club: 'Miami Heat', image: 'https://upload.wikimedia.org/wikipedia/ru/f/fb/Miami_Heat_logo.svg'},
+        ],
+        answer: {person: 'Nikola Jokić', club: 'Denver Nuggets'},
+      },
+      {
+        options: [
+          {club: 'Boston Celtics', image: 'https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg'},
+          {club: 'Dallas Mavericks', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Dallas_Mavericks_logo.svg/640px-Dallas_Mavericks_logo.svg.png'},
+          {club: 'Golden State Warriors', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxfY3OJxOojGPzBhhRp5tJ8OmrzNuvY0f_0Q&s'},
+        ],
+        answer: {person: 'Jayson Tatum', club: 'Boston Celtics'},
+      },
+      {
+        options: [
+          {club: 'Los Angeles Clippers', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Los_Angeles_Clippers_%282024%29.svg/1200px-Los_Angeles_Clippers_%282024%29.svg.png'},
+          {club: 'Denver Nuggets', image: 'https://upload.wikimedia.org/wikipedia/en/7/76/Denver_Nuggets.svg'},
+          {club: 'Los Angeles Lakers', image: 'https://seeklogo.com/images/L/los-angeles-lakers-logo-805BBEB14F-seeklogo.com.png'},
+        ],
+        answer: {person: 'Kawhi Leonard', club: 'Los Angeles Clippers'},
+      },
+      {
+        options: [
+          {club: 'Miami Heat', image: 'https://upload.wikimedia.org/wikipedia/ru/f/fb/Miami_Heat_logo.svg'},
+          {club: 'Phoenix Suns', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhyZdwUEaD675rVLNGOx7XpNCkXTeHiGf0aw&s'},
+          {club: 'Los Angeles Clippers', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Los_Angeles_Clippers_%282024%29.svg/1200px-Los_Angeles_Clippers_%282024%29.svg.png'},
+        ],
+        answer: {person: 'Jimmy Butler', club: 'Miami Heat'},
+      },
+      {
+        options: [
+          {club: 'Milwaukee Bucks', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Milwaukee_Bucks_logo.svg/640px-Milwaukee_Bucks_logo.svg.png'},
+          {club: 'Philadelphia 76ers', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Philadelphia_76ers_logo.svg/1200px-Philadelphia_76ers_logo.svg.png'},
+          {club: 'Phoenix Suns', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhyZdwUEaD675rVLNGOx7XpNCkXTeHiGf0aw&s'},
+        ],
+        answer: {person: 'Joel Embiid', club: 'Philadelphia 76ers'},
       },
     ],
   },
