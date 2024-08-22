@@ -1,10 +1,15 @@
 import {StyleSheet, Text, View} from 'react-native';
 import {BlueBg, MainImageBg} from '../components/ui';
+import IconAthlete from '../components/icons/IconAthlete';
 
 const MainScreen = () => {
   return (
     <MainImageBg>
-      <BlueBg></BlueBg>
+      <BlueBg>
+        <View>
+          <IconAthlete />
+        </View>
+      </BlueBg>
     </MainImageBg>
   );
 };
