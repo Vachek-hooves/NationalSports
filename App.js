@@ -1,6 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {AthleteScreen, MainScreen, SaluteScreen} from './screen';
+import {AthleteScreen, HomeScreen, SaluteScreen} from './screen';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,8 +15,8 @@ function App() {
         }}>
         <Stack.Screen name="SaluteScreen" component={SaluteScreen} />
         <Stack.Screen
-          name="MainScreen"
-          component={MainScreen}
+          name="HomeScreen"
+          component={HomeScreen}
           // options={{animation: 'fade', animationDuration: 1500}}
         />
         <Stack.Screen name="AthleteScreen" component={AthleteScreen} />

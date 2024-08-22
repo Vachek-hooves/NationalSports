@@ -11,7 +11,7 @@ const SaluteScreen = ({navigation}) => {
       toValue: 1,
       duration: 1500,
       useNativeDriver: true,
-    }).start(() => navigation.replace('MainScreen'));
+    }).start(() => navigation.replace('HomeScreen'));
   }, [animationEffect]);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const SaluteScreen = ({navigation}) => {
       });
     }, 10);
 
-    return () => clearInterval(interval); // Очищення інтервалу, якщо компонент розмонтується
+    return () => clearInterval(interval);
   }, [navigation]);
 
   return (

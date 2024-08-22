@@ -1,5 +1,5 @@
-import MainScreen from './MainScreen';
+import HomeScreen from './HomeScreen';
 import SaluteScreen from './SaluteScreen';
 import AthleteScreen from './AthleteScreen';
 
-export {MainScreen, SaluteScreen, AthleteScreen};
+export {HomeScreen, SaluteScreen, AthleteScreen};

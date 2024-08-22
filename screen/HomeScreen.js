@@ -2,7 +2,7 @@ import {View} from 'react-native';
 import {BlueBg, MainImageBg} from '../components/ui';
 import IconAthlete from '../components/icons/IconAthlete';
 
-const MainScreen = () => {
+const HomeScreen = () => {
   return (
     <MainImageBg>
       <BlueBg>
@@ -14,4 +14,4 @@ const MainScreen = () => {
   );
 };
 
-export default MainScreen;
+export default HomeScreen;
