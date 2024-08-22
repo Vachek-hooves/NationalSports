@@ -1,5 +1,4 @@
 import {ImageBackground, StyleSheet} from 'react-native';
-import React from 'react';
 
 const MainImageBg = ({children}) => {
   return (
@@ -18,7 +17,7 @@ export default MainImageBg;
 
 const styles = StyleSheet.create({
   imageBackground: {
-    flex: 1,
+    // flex: 1,
     opacity: 0.1,
   },
 });

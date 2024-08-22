@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     gap: 60,
-    height: '100%',
+    height: height,
     marginTop: MARGIN_TOP,
   },
 });

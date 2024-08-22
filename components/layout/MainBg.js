@@ -1,11 +1,21 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {StyleSheet, Text, View, Dimensions} from 'react-native';
+import {BlueBg, MainImageBg} from '../ui';
 
-const MainBg = () => {
+const {height} = Dimensions.get('screen');
+
+const MainBg = ({children}) => {
   return (
-    <View>
-      <Text>MainBg</Text>
-    </View>
+    <BlueBg>
+      <MainImageBg />
+      <View
+        style={{
+          height: height,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        {children}
+      </View>
+    </BlueBg>
   );
 };
 
