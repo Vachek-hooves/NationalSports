@@ -10,10 +10,11 @@ const IconReturn = () => {
         source={require('../../assets/img/icons/back.png')}
         style={{
           tintColor: Color.milk,
-          width: 45,
-          height: 45,
-          alignSelf: 'flex-end',
-          margin: 40,
+          width: 40,
+          height: 40,
+          // alignSelf: 'flex-end',
+          // margin: 30,
+          
         }}
       />
     </TouchableOpacity>

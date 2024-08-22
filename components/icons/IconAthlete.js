@@ -19,12 +19,14 @@ export default IconAthlete;
 
 const styles = StyleSheet.create({
   iconStyle: {
+    position: 'absolute',
     // width: '100%',
     tintColor: Color.milk,
     height: 40,
     width: 40,
-    alignSelf: 'flex-end',
-    marginRight: 40,
-    marginTop: 40,
+    // alignSelf: 'flex-end',
+    // marginRight: 40,
+    // marginTop: 40,
+    top: 40,
   },
 });
