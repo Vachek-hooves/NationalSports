@@ -1212,6 +1212,7 @@ export const MATCH_DATA = [
     ],
   },
   {
+    task: 'Match the player with baseball club',
     name: 'Baseball',
     id: 'ba1',
     levelQuestions: [
@@ -1418,12 +1419,97 @@ export const MATCH_DATA = [
     ],
   },
   {
+    task: 'Match the player with Hockey club',
     name: 'Hockey',
     id: 'ho1',
     levelQuestions: [
       {
         options: [
-          {club: '', image: ''},
+          {
+            club: 'Colorado Avalanche',
+            image:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLxAKK-PTC-GnRvNQjHIv7y5nINXKDSjFwzg&s',
+          },
+          {
+            club: 'Edmonton Oilers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/ru/archive/0/02/20220823104023%21Edmonton_oilers_logo.png',
+          },
+          {
+            club: 'New York Rangers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/New_York_Rangers.svg/1200px-New_York_Rangers.svg.png',
+          },
+        ],
+        answer: {person: 'Connor McDavid', club: 'Edmonton Oilers'},
+      },
+      {
+        options: [
+          {
+            club: 'Pittsburgh Penguins',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/Pittsburgh_Penguins_logo_%282016%29.svg/800px-Pittsburgh_Penguins_logo_%282016%29.svg.png',
+          },
+          {
+            club: 'Montreal Canadiens',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/6/69/Montreal_Canadiens.svg',
+          },
+          {
+            club: 'Tampa Bay Lightning',
+            image:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQfnYcO2bvJ2FC2dS9uxOVCGuGWX1lV-YWIQ&s',
+          },
+        ],
+        answer: {person: 'Sidney Crosby', club: 'Pittsburgh Penguins'},
+      },
+      {
+        options: [
+          {
+            club: 'Edmonton Oilers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/ru/archive/0/02/20220823104023%21Edmonton_oilers_logo.png',
+          },
+          {
+            club: 'Washington Capitals',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Washington_Capitals_logo.svg/1200px-Washington_Capitals_logo.svg.png',
+          },
+          {
+            club: 'New York Rangers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/New_York_Rangers.svg/1200px-New_York_Rangers.svg.png',
+          },
+        ],
+        answer: {person: 'Alexander Ovechkin', club: 'Washington Capitals'},
+      },
+      {
+        options: [
+          {
+            club: 'Tampa Bay Lightning',
+            image:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQfnYcO2bvJ2FC2dS9uxOVCGuGWX1lV-YWIQ&s',
+          },
+          {
+            club: 'Washington Capitals',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Washington_Capitals_logo.svg/1200px-Washington_Capitals_logo.svg.png',
+          },
+          {
+            club: 'Toronto Maple Leafs',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Toronto_Maple_Leafs_2016_logo.svg/800px-Toronto_Maple_Leafs_2016_logo.svg.png',
+          },
+        ],
+        answer: {person: 'Auston Matthews', club: 'Toronto Maple Leafs'},
+      },
+      {
+        options: [
+          {
+            club: 'Pittsburgh Penguins',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/Pittsburgh_Penguins_logo_%282016%29.svg/800px-Pittsburgh_Penguins_logo_%282016%29.svg.png',
+          },
           {club: '', image: ''},
           {club: '', image: ''},
         ],
@@ -1431,75 +1517,103 @@ export const MATCH_DATA = [
       },
       {
         options: [
-          {club: '', image: ''},
-          {club: '', image: ''},
-          {club: '', image: ''},
+          {
+            club: 'Colorado Avalanche',
+            image:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLxAKK-PTC-GnRvNQjHIv7y5nINXKDSjFwzg&s',
+          },
+          {
+            club: 'Toronto Maple Leafs',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Toronto_Maple_Leafs_2016_logo.svg/800px-Toronto_Maple_Leafs_2016_logo.svg.png',
+          },
+          {
+            club: 'Washington Capitals',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Washington_Capitals_logo.svg/1200px-Washington_Capitals_logo.svg.png',
+          },
         ],
-        answer: {person: '', club: ''},
+        answer: {person: 'Nathan MacKinnon', club: 'Colorado Avalanche'},
       },
       {
         options: [
-          {club: '', image: ''},
-          {club: '', image: ''},
-          {club: '', image: ''},
+          {
+            club: 'Montreal Canadiens',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/6/69/Montreal_Canadiens.svg',
+          },
+          {
+            club: 'Pittsburgh Penguins',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/Pittsburgh_Penguins_logo_%282016%29.svg/800px-Pittsburgh_Penguins_logo_%282016%29.svg.png',
+          },
+          {
+            club: 'Tampa Bay Lightning',
+            image:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQfnYcO2bvJ2FC2dS9uxOVCGuGWX1lV-YWIQ&s',
+          },
         ],
-        answer: {person: '', club: ''},
+        answer: {person: 'Carey Price', club: 'Montreal Canadiens'},
       },
       {
         options: [
-          {club: '', image: ''},
-          {club: '', image: ''},
-          {club: '', image: ''},
+          {
+            club: 'Toronto Maple Leafs',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Toronto_Maple_Leafs_2016_logo.svg/800px-Toronto_Maple_Leafs_2016_logo.svg.png',
+          },
+          {
+            club: 'Edmonton Oilers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/ru/archive/0/02/20220823104023%21Edmonton_oilers_logo.png',
+          },
+          {
+            club: 'New York Rangers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/New_York_Rangers.svg/1200px-New_York_Rangers.svg.png',
+          },
         ],
-        answer: {person: '', club: ''},
+        answer: {person: 'Leon Draisaitl', club: 'Edmonton Oilers'},
       },
       {
         options: [
-          {club: '', image: ''},
-          {club: '', image: ''},
-          {club: '', image: ''},
+          {
+            club: 'Pittsburgh Penguins',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/Pittsburgh_Penguins_logo_%282016%29.svg/800px-Pittsburgh_Penguins_logo_%282016%29.svg.png',
+          },
+          {
+            club: 'Tampa Bay Lightning',
+            image:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQfnYcO2bvJ2FC2dS9uxOVCGuGWX1lV-YWIQ&s',
+          },
+          {
+            club: 'Edmonton Oilers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/ru/archive/0/02/20220823104023%21Edmonton_oilers_logo.png',
+          },
         ],
-        answer: {person: '', club: ''},
+        answer: {person: 'Andrei Vasilevskiy', club: 'Tampa Bay Lightning'},
       },
       {
         options: [
-          {club: '', image: ''},
-          {club: '', image: ''},
-          {club: '', image: ''},
+          {
+            club: 'Pittsburgh Penguins',
+            image:
+              'https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/Pittsburgh_Penguins_logo_%282016%29.svg/800px-Pittsburgh_Penguins_logo_%282016%29.svg.png',
+          },
+          {
+            club: 'New York Rangers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/New_York_Rangers.svg/1200px-New_York_Rangers.svg.png',
+          },
+          {
+            club: 'Edmonton Oilers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/ru/archive/0/02/20220823104023%21Edmonton_oilers_logo.png',
+          },
         ],
-        answer: {person: '', club: ''},
-      },
-      {
-        options: [
-          {club: '', image: ''},
-          {club: '', image: ''},
-          {club: '', image: ''},
-        ],
-        answer: {person: '', club: ''},
-      },
-      {
-        options: [
-          {club: '', image: ''},
-          {club: '', image: ''},
-          {club: '', image: ''},
-        ],
-        answer: {person: '', club: ''},
-      },
-      {
-        options: [
-          {club: '', image: ''},
-          {club: '', image: ''},
-          {club: '', image: ''},
-        ],
-        answer: {person: '', club: ''},
-      },
-      {
-        options: [
-          {club: '', image: ''},
-          {club: '', image: ''},
-          {club: '', image: ''},
-        ],
-        answer: {person: '', club: ''},
+        answer: {person: 'Artemi Panarin', club: 'New York Rangers'},
       },
     ],
   },
