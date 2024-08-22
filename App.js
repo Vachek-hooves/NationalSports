@@ -1,6 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {AthleteScreen, HomeScreen, SaluteScreen} from './screen';
+import {AthleteScreen, GameScreen, HomeScreen, SaluteScreen} from './screen';
 import {SportProvider, useSportContext} from './store/sport_context';
 import {SportContext} from './store/sport_context';
 const Stack = createNativeStackNavigator();
@@ -22,6 +22,7 @@ function App() {
             // options={{animation: 'fade', animationDuration: 1500}}
           />
           <Stack.Screen name="AthleteScreen" component={AthleteScreen} />
+          <Stack.Screen name="GameScreen" component={GameScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SportProvider>

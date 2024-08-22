@@ -8,12 +8,7 @@ const IconBall = ({screen, children}) => {
     <TouchableOpacity
       onPress={() => navigation.navigate(`${screen}`)}
       activeOpacity={0.5}
-      style={{
-        position: 'relative',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginVertical: 30,
-      }}>
+      style={styles.btnStyle}>
       <Image
         source={require('../../assets/img/icons/ball.png')}
         style={styles.iconStyle}
@@ -36,5 +31,11 @@ const styles = StyleSheet.create({
     color: Color.milk,
     fontWeight: '900',
     fontSize: 34,
+  },
+  btnStyle: {
+    position: 'relative',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 30,
   },
 });
