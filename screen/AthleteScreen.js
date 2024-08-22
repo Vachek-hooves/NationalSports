@@ -1,12 +1,8 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {BackgroundCombined} from '../components/ui';
 
 const AthleteScreen = () => {
-  return (
-    <View>
-      <Text>AthleteScreen</Text>
-    </View>
-  );
+  return <BackgroundCombined></BackgroundCombined>;
 };
 
 export default AthleteScreen;

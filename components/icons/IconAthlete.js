@@ -1,5 +1,4 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React from 'react';
+import {Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Color} from '../../constants/colors';
 import {useNavigation} from '@react-navigation/native';
 
@@ -10,15 +9,7 @@ const IconAthlete = () => {
     <TouchableOpacity onPress={() => navigation.navigate('AthleteScreen')}>
       <Image
         source={require('../../assets/img/icons/athletics.png')}
-        style={{
-          width: '100%',
-          tintColor: Color.milk,
-          height: 40,
-          width: 40,
-          alignSelf: 'flex-end',
-          marginRight: 40,
-          marginTop: 40,
-        }}
+        style={styles.iconStyle}
       />
     </TouchableOpacity>
   );
@@ -26,4 +17,14 @@ const IconAthlete = () => {
 
 export default IconAthlete;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  iconStyle: {
+    width: '100%',
+    tintColor: Color.milk,
+    height: 40,
+    width: 40,
+    alignSelf: 'flex-end',
+    marginRight: 40,
+    marginTop: 40,
+  },
+});

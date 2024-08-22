@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 import {BlueBg, MainImageBg} from '../components/ui';
 import IconAthlete from '../components/icons/IconAthlete';
 
@@ -15,11 +15,3 @@ const MainScreen = () => {
 };
 
 export default MainScreen;
-
-const styles = StyleSheet.create({
-  text: {
-    color: 'green',
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-});
