@@ -1,7 +1,9 @@
-import {View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {BlueBg, MainImageBg} from '../components/ui';
 import IconAthlete from '../components/icons/IconAthlete';
 import {useSportContext} from '../store/sport_context';
+import {IconBall} from '../components/icons';
+import {Color} from '../constants/colors';
 
 const HomeScreen = () => {
   const {quiz, guess} = useSportContext();
@@ -9,8 +11,17 @@ const HomeScreen = () => {
   return (
     <MainImageBg>
       <BlueBg>
-        <View>
-          <IconAthlete />
+        <IconAthlete />
+        <View style={styles.container}>
+          {/* <View style={{flex:1}}> */}
+          <View>
+            <IconBall>GAME</IconBall>
+            <IconBall>RULES</IconBall>
+          </View>
+          {/* <Text style={{fontWeight: '800', fontSize: 46, color: Color.milk}}>
+            a;ldfs;lasdj;lasdka;ldkfa;lsfk;alsdk
+          </Text> */}
+          {/* </View> */}
         </View>
       </BlueBg>
     </MainImageBg>
@@ -18,3 +29,12 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    gap: 60,
+    justifyContent: 'center',
+    height: '90%',
+  },
+});

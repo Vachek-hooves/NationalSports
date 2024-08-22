@@ -9,7 +9,7 @@ const SaluteScreen = ({navigation}) => {
   useEffect(() => {
     Animated.timing(animationEffect, {
       toValue: 1,
-      duration: 1500,
+      duration: 10500,
       useNativeDriver: true,
     }).start(() => navigation.replace('HomeScreen'));
   }, [animationEffect]);

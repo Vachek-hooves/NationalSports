@@ -19,7 +19,7 @@ export default IconAthlete;
 
 const styles = StyleSheet.create({
   iconStyle: {
-    width: '100%',
+    // width: '100%',
     tintColor: Color.milk,
     height: 40,
     width: 40,
