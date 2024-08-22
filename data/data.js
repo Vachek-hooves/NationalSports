@@ -1,4 +1,4 @@
-export const IMAGES = [
+export const IMAGES_QUIZ = [
   {
     id: 'q1',
     sport: 'Formula 1',
@@ -24,6 +24,9 @@ export const IMAGES = [
     sport: 'UFC',
     image: require('../assets/img/quizbg/UFC.jpg'),
   },
+];
+
+export const IMAGES_GUESS = [
   {
     id: 'fo1',
     sport: 'Football',

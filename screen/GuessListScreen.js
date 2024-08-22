@@ -1,12 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {MainBg} from '../components/layout';
 
 const GuessListScreen = () => {
-  return (
-    <View>
-      <Text>GuessListScreen</Text>
-    </View>
-  );
+  return <MainBg></MainBg>;
 };
 
 export default GuessListScreen;

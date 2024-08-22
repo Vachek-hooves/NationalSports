@@ -1,13 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
-import {BackgroundCombined} from '../components/ui';
+import {StyleSheet} from 'react-native';
+import {MainBg} from '../components/layout';
 import IconReturn from '../components/icons/IconReturn';
 
 const AthleteScreen = () => {
   return (
-    <BackgroundCombined>
-      <Text>Athlete detailsr</Text>
+    <MainBg>
       <IconReturn />
-    </BackgroundCombined>
+    </MainBg>
   );
 };
 

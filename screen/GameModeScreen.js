@@ -1,10 +1,6 @@
-import {StyleSheet, Text, View, Dimensions} from 'react-native';
+import {View} from 'react-native';
 import {MainBg} from '../components/layout';
 import {IconBall, IconReturn} from '../components/icons';
-
-const {height, width} = Dimensions.get('screen');
-const MARGIN_BOTTOM = height * 0.1;
-const RIGHT_MARGIN = width * 0.1;
 
 const GameModeScreen = () => {
   return (
@@ -13,18 +9,9 @@ const GameModeScreen = () => {
         <IconBall screen={'QuizListScreen'}>QUIZ</IconBall>
         <IconBall screen={'GuessListScreen'}>QUESS</IconBall>
       </View>
-      <View
-        style={{
-          position: 'absolute',
-          bottom: MARGIN_BOTTOM,
-          right: RIGHT_MARGIN,
-        }}>
-        <IconReturn />
-      </View>
+      <IconReturn />
     </MainBg>
   );
 };
 
 export default GameModeScreen;
-
-const styles = StyleSheet.create({});
