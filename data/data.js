@@ -1,3 +1,56 @@
+export const IMAGES = [
+  {
+    id: 'q1',
+    sport: 'Formula 1',
+    image: require('../assets/img/quizbg/Formula.jpg'),
+  },
+  {
+    id: 'w1',
+    sport: 'Golf',
+    image: require('../assets/img/quizbg/golf1.jpg'),
+  },
+  {
+    id: 'e1',
+    sport: 'Rugby',
+    image: require('../assets/img/quizbg/rugby.jpg'),
+  },
+  {
+    id: 'r1',
+    sport: 'Boxing',
+    image: require('../assets/img/quizbg/boxing.jpg'),
+  },
+  {
+    id: 't1',
+    sport: 'UFC',
+    image: require('../assets/img/quizbg/UFC.jpg'),
+  },
+  {
+    id: 'fo1',
+    sport: 'Football',
+    image: require('../assets/img/quizbg/football.jpg'),
+  },
+  {
+    id: 'b1',
+    sport: 'Basketball',
+    image: require('../assets/img/quizbg/basketball.jpg'),
+  },
+  {
+    id: 'v1',
+    sport: 'Volleyball',
+    image: require('../assets/img/quizbg/voleyball.jpg'),
+  },
+  {
+    id: 'ba1',
+    sport: 'Baseball',
+    image: require('../assets/img/quizbg/baseball.jpg'),
+  },
+  {
+    id: 'ho1',
+    sport: 'Hockey',
+    image: require('../assets/img/quizbg/hockey.jpg'),
+  },
+];
+
 export const QUIZ_DATA = [
   {
     close: false,
@@ -113,7 +166,7 @@ export const QUIZ_DATA = [
   },
   {
     close: false,
-    id: 'g1',
+    id: 'w1',
     name: 'Golf',
     levelQuestions: [
       {
@@ -222,8 +275,8 @@ export const QUIZ_DATA = [
   },
   {
     close: false,
-    id: 'w1',
-    name: 'Rugby Quiz',
+    id: 'e1',
+    name: 'Rugby',
     levelQuestions: [
       {
         interestingFact:
@@ -334,7 +387,7 @@ export const QUIZ_DATA = [
   {
     close: false,
     id: 'r1',
-    name: 'Boxing Quiz',
+    name: 'Boxing',
     levelQuestions: [
       {
         interestingFact:
@@ -454,7 +507,7 @@ export const QUIZ_DATA = [
   {
     close: false,
     id: 't1',
-    name: 'UFC Quiz',
+    name: 'UFC',
     levelQuestions: [
       {
         interestingFact:
