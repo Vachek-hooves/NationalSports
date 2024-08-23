@@ -37,7 +37,7 @@ const QuizListScreen = () => {
         data={IMAGES_QUIZ}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.listContent}
-        ListFooterComponent={<View style={styles.footer} />}
+        // ListFooterComponent={<View style={styles.footer} />}
       />
       <View style={{margin: HEIGHT}}></View>
       <IconReturn />
@@ -63,9 +63,9 @@ const styles = StyleSheet.create({
     borderColor: Color.milk,
   },
   listContent: {
-    paddingBottom: 50,
+    paddingBottom: 20,
   },
   footer: {
-    height: 50,
+    height: 10,
   },
 });
