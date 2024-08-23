@@ -31,6 +31,7 @@ const useQuizGame = levelId => {
       };
     });
   };
+  
   const nextQuestion = () => {
     setGeneralState(prevState => {
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
