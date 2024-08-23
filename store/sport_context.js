@@ -7,7 +7,6 @@ export const SportContext = createContext({});
 export const SportProvider = ({children}) => {
   const [quiz, setQuiz] = useState([]);
   const [guess, setGuess] = useState([]);
-  console.log(MATCH_DATA)
 
   useEffect(() => {
     const launchData = async () => {

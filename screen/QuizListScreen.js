@@ -11,14 +11,22 @@ import {MainBg} from '../components/layout';
 import {IMAGES_QUIZ} from '../data/data';
 import {Color} from '../constants/colors';
 import {IconReturn} from '../components/icons';
+import {useNavigation} from '@react-navigation/native';
+
 const {width, height} = Dimensions.get('screen');
 const WIDTH = width * 0.8;
 const HEIGHT = height * 0.09;
 
 const QuizListScreen = () => {
+  const navigation = useNavigation();
+
   function renderQuizList({item}) {
+    const id = item.id;
     return (
-      <TouchableOpacity activeOpacity={0.6} style={styles.btnStyle}>
+      <TouchableOpacity
+        activeOpacity={0.6}
+        style={styles.btnStyle}
+        onPress={() => navigation.navigate('QuizGameScreen', id)}>
         <ImageBackground
           source={item.image}
           style={styles.image}
