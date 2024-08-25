@@ -66,7 +66,7 @@ const QuizGameScreen = ({route, navigation}) => {
           </>
         )}
       </ScrollView>
-      <IconReturn />
+      {/* <IconReturn /> */}
     </MainBg>
   );
 };

@@ -33,6 +33,8 @@ const useQuizGame = levelId => {
         isOptionOff: true,
         nextBtnActive: true,
         score: isCorrect ? prevState.score + 1 : prevState.score,
+        // nextBtnActive: !isLastQuestion, // Next button should be active if not the last question
+        // showResultsButton: isOptionChosenOnLastQuestion, // Show results button if on last question and option chosen
       };
     });
   };
@@ -41,6 +43,7 @@ const useQuizGame = levelId => {
     setGeneralState(prevState => {
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
       console.log('useQuizGame', isLastQuestion);
+
       return {
         ...prevState,
         currentIndex: isLastQuestion
@@ -51,6 +54,8 @@ const useQuizGame = levelId => {
         isOptionOff: false,
         nextBtnActive: false,
         showResultsButton: isLastQuestion,
+        // currentIndex: isLastQuestion ? prevState.currentIndex : prevState.currentIndex + 1,
+        showResultsButton: isLastQuestion ? prevState.showResultsButton : false,
       };
     });
   };
