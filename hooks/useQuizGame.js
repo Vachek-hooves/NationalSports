@@ -3,7 +3,7 @@ import {useState} from 'react';
 import {useSportContext} from '../store/sport_context';
 
 const useQuizGame = levelId => {
-  console.log('useQuizGame', levelId);
+//   console.log('useQuizGame', levelId);
   const {quiz} = useSportContext();
   const thisLevel = quiz.find(item => item.id === levelId) || [];
   const questionBox = thisLevel.levelQuestions;
@@ -18,6 +18,7 @@ const useQuizGame = levelId => {
   });
 
   const validationCheck = choosenOption => {
+    console.log(choosenOption);
     setGeneralState(prevState => {
       const isCorrect =
         choosenOption === questionBox[prevState.currentIndex].correctAnswer;
@@ -31,7 +32,7 @@ const useQuizGame = levelId => {
       };
     });
   };
-  
+
   const nextQuestion = () => {
     setGeneralState(prevState => {
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
