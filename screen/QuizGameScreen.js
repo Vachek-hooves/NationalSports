@@ -12,6 +12,7 @@ import {
   RestartBtn,
   ResultsBtn,
 } from '../components/Quiz';
+import {QuizBtn} from '../components/ui';
 
 const QuizGameScreen = ({route, navigation}) => {
   const levelId = route.params;
@@ -48,7 +49,7 @@ const QuizGameScreen = ({route, navigation}) => {
   console.log('QuizGameScreen', showResultsButton);
 
   return (
-    <MainBg >
+    <MainBg>
       <ScrollView contentContainerStyle={{padding: 10}}>
         <QuizQuestion question={question} />
         <QuizOptions
@@ -58,12 +59,17 @@ const QuizGameScreen = ({route, navigation}) => {
           disable={isOptionOff}
           correctOption={correctOption}
         />
-        {!isLastQuestion && nextBtnActive && <NextBtn onPress={nextQuestion} />}
+        {/* {!isLastQuestion && nextBtnActive && <NextBtn onPress={nextQuestion} />} */}
+        {!isLastQuestion && nextBtnActive && (
+          <QuizBtn onPress={nextQuestion}>NEXT</QuizBtn>
+        )}
         {isLastQuestion && (
-          <>
-            <ResultsBtn onPress={navigateToResultsHandler} />
-            <RestartBtn onPress={restartHandle} />
-          </>
+          <View style={{flexDirection: 'row', flex: 1, gap: 20}}>
+            <QuizBtn onPress={restartHandle}>Restart</QuizBtn>
+            <QuizBtn onPress={navigateToResultsHandler}>Results</QuizBtn>
+            {/* <ResultsBtn onPress={navigateToResultsHandler} style={{flex: 1}} /> */}
+            {/* <RestartBtn onPress={restartHandle} /> */}
+          </View>
         )}
       </ScrollView>
       {/* <IconReturn /> */}

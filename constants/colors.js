@@ -3,4 +3,5 @@ export const Color = {
   white: '#',
   milk: '#FFF5E4',
   brown: '#CD5C08',
+  ocean: '#006989',
 };

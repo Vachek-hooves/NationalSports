@@ -4,7 +4,7 @@ import {Color} from '../../constants/colors';
 
 const NextBtn = ({onPress}) => {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} style={{alignItems: 'center'}}>
       <Text style={styles.text}>NextBtn</Text>
     </TouchableOpacity>
   );
