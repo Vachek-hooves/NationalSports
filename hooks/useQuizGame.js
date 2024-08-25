@@ -23,6 +23,9 @@ const useQuizGame = levelId => {
     setGeneralState(prevState => {
       const isCorrect =
         choosenOption === questionBox[prevState.currentIndex].correctAnswer;
+      const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
+      const isOptionChosenOnLastQuestion =
+        isLastQuestion && choosenOption !== null;
       return {
         ...prevState,
         currentOption: choosenOption,
@@ -37,6 +40,7 @@ const useQuizGame = levelId => {
   const nextQuestion = () => {
     setGeneralState(prevState => {
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
+      console.log('useQuizGame', isLastQuestion);
       return {
         ...prevState,
         currentIndex: isLastQuestion

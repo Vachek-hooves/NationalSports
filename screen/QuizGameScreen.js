@@ -9,6 +9,7 @@ import {
   NextBtn,
   QuizOptions,
   QuizQuestion,
+  RestartBtn,
   ResultsBtn,
 } from '../components/Quiz';
 
@@ -44,6 +45,7 @@ const QuizGameScreen = ({route, navigation}) => {
     });
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
+  console.log('QuizGameScreen', showResultsButton);
 
   return (
     <MainBg>
@@ -57,11 +59,12 @@ const QuizGameScreen = ({route, navigation}) => {
           correctOption={correctOption}
         />
         {!isLastQuestion && nextBtnActive && <NextBtn onPress={nextQuestion} />}
-        {isLastQuestion && showResultsButton && (
-          <ResultsBtn onPress={navigateToResultsHandler} />
+        {isLastQuestion && (
+          <>
+            <ResultsBtn onPress={navigateToResultsHandler} />
+            <RestartBtn onPress={restartHandle} />
+          </>
         )}
-        {/* {nextBtnActive && <NextBtn onPress={nextQuestion} />} */}
-        {/* {showResultsButton && <ResultsBtn onPress={navigateToResultsHandler} />} */}
       </ScrollView>
       <IconReturn />
     </MainBg>

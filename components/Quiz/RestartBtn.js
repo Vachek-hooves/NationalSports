@@ -1,15 +1,15 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Color} from '../../constants/colors';
 
-const ResultsBtn = ({onPress}) => {
+const RestartBtn = ({onPress}) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <Text style={styles.text}>Results Screen</Text>
+      <Text style={styles.text}>RestartBtn</Text>
     </TouchableOpacity>
   );
 };
 
-export default ResultsBtn;
+export default RestartBtn;
 
 const styles = StyleSheet.create({
   text: {
