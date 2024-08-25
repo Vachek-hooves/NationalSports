@@ -48,7 +48,7 @@ const QuizGameScreen = ({route, navigation}) => {
   console.log('QuizGameScreen', showResultsButton);
 
   return (
-    <MainBg>
+    <MainBg >
       <ScrollView contentContainerStyle={{padding: 10}}>
         <QuizQuestion question={question} />
         <QuizOptions

@@ -1,5 +1,12 @@
-import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React from 'react';
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Animated,
+} from 'react-native';
+import React, {useState} from 'react';
 import {Color} from '../../constants/colors';
 
 const QuizOptions = ({
@@ -9,20 +16,60 @@ const QuizOptions = ({
   disable,
   correctOption,
 }) => {
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [scale] = useState(new Animated.Value(1));
+
+  const handlePress = item => {
+    setSelectedOption(item);
+    Animated.sequence([
+      Animated.timing(scale, {
+        toValue: 1.2,
+        duration: 150,
+        useNativeDriver: true,
+      }),
+      Animated.timing(scale, {
+        toValue: 1,
+        duration: 150,
+        useNativeDriver: true,
+      }),
+    ]).start(() => {
+      onPress(item);
+      setSelectedOption(null);
+    });
+  };
   return (
+    // <View style={styles.container}>
+    //   {options.map((item, i) => {
+    //     return (
+    //       <TouchableOpacity
+    //         key={i}
+    //         style={styles.option}
+    //         // onPress={() => onPress(item)}
+    //         onPress={() => handlePress(item)}
+    //         disabled={disable}>
+    //         {/* <Text style={styles.text}>{item}</Text> */}
+    //         <Animated.View style={[styles.option, { transform: [{ scale }] }]}>
+    //         <Text style={styles.text}>{item}</Text>
+    //       </Animated.View>
+    //       </TouchableOpacity>
+    //     );
+    //   })}
+    // </View>
     <View style={styles.container}>
-      {options.map((item, i) => {
-        return (
-          <TouchableOpacity
-            key={i}
-            style={styles.option}
-            onPress={() => onPress(item)}
-            disabled={disable}
-          >
+      {options.map((item, i) => (
+        <TouchableOpacity
+          key={i}
+          onPress={() => handlePress(item)}
+          disabled={disable}>
+          <Animated.View
+            style={[
+              styles.option,
+              selectedOption === item && {transform: [{scale}]},
+            ]}>
             <Text style={styles.text}>{item}</Text>
-          </TouchableOpacity>
-        );
-      })}
+          </Animated.View>
+        </TouchableOpacity>
+      ))}
     </View>
   );
 };
@@ -32,6 +79,8 @@ export default QuizOptions;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // alignItems: 'center',
+    marginHorizontal: 20,
   },
   option: {
     marginHorizontal: 10,
@@ -39,12 +88,12 @@ const styles = StyleSheet.create({
     backgroundColor: Color.milk,
     borderRadius: 10,
     alignItems: 'center',
-    marginVertical: 10,
+    marginVertical: 15,
+    // width: '80%',
   },
   text: {
     color: Color.blue,
     fontSize: 20,
     fontWeight: '600',
-   
   },
 });
