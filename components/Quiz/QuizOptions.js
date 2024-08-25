@@ -65,8 +65,29 @@ const QuizOptions = ({
             style={[
               styles.option,
               selectedOption === item && {transform: [{scale}]},
+              {
+                backgroundColor:
+                  item == correctOption
+                    ? Color.green
+                    : item == currentOption
+                    ? Color.red
+                    : Color.milk,
+              },
             ]}>
-            <Text style={styles.text}>{item}</Text>
+            <Text
+              style={[
+                styles.text,
+                {
+                  color:
+                    item == correctOption
+                      ? Color.blue
+                      : item == currentOption
+                      ? Color.blue
+                      : Color.blue,
+                },
+              ]}>
+              {item}
+            </Text>
           </Animated.View>
         </TouchableOpacity>
       ))}
@@ -85,14 +106,14 @@ const styles = StyleSheet.create({
   option: {
     marginHorizontal: 10,
     padding: 20,
-    backgroundColor: Color.milk,
+    // backgroundColor: Color.milk,
     borderRadius: 10,
     alignItems: 'center',
     marginVertical: 15,
     // width: '80%',
   },
   text: {
-    color: Color.blue,
+    // color: Color.blue,
     fontSize: 20,
     fontWeight: '600',
   },

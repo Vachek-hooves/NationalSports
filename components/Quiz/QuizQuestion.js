@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     width: '100%',
     height: 100,
+    justifyContent: 'center',
   },
   text: {
     color: Color.blue,
