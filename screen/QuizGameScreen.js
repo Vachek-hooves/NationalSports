@@ -5,9 +5,14 @@ import {IconReturn} from '../components/icons';
 import useQuizGame from '../hooks/useQuizGame';
 import {useSportContext} from '../store/sport_context';
 import {Color} from '../constants/colors';
-import {NextBtn, QuizOptions, QuizQuestion} from '../components/Quiz';
+import {
+  NextBtn,
+  QuizOptions,
+  QuizQuestion,
+  ResultsBtn,
+} from '../components/Quiz';
 
-const QuizGameScreen = ({route}) => {
+const QuizGameScreen = ({route, navigation}) => {
   const levelId = route.params;
   const {quiz} = useSportContext();
   const {
@@ -25,26 +30,39 @@ const QuizGameScreen = ({route}) => {
     isOptionOff,
     score,
     nextBtnActive,
+    showResultsButton,
   } = generalState;
 
   const question = questionBox[currentIndex].question || '';
   const options = questionBox[currentIndex].options || [];
 
+  const navigateToResultsHandler = () => {
+    navigation.navigate('ResultsScreen', {
+      score,
+      name: questionBox.name,
+      totalQuestions: questionBox.length,
+    });
+  };
+  const isLastQuestion = currentIndex === questionBox.length - 1;
+
   return (
     <MainBg>
-      <View>
-        {/* <ScrollView showsVerticalScrollIndicator={false}> */}
-          <QuizQuestion question={question} />
-          <QuizOptions
-            options={options}
-            currentOption={currentOption}
-            onPress={validationCheck}
-            disable={isOptionOff}
-            correctOption={correctOption}
-          />
-        {/* </ScrollView> */}
-        {nextBtnActive && <NextBtn onPress={nextQuestion} />}
-      </View>
+      <ScrollView contentContainerStyle={{padding: 10}}>
+        <QuizQuestion question={question} />
+        <QuizOptions
+          options={options}
+          currentOption={currentOption}
+          onPress={validationCheck}
+          disable={isOptionOff}
+          correctOption={correctOption}
+        />
+        {!isLastQuestion && nextBtnActive && <NextBtn onPress={nextQuestion} />}
+        {isLastQuestion && showResultsButton && (
+          <ResultsBtn onPress={navigateToResultsHandler} />
+        )}
+        {/* {nextBtnActive && <NextBtn onPress={nextQuestion} />} */}
+        {/* {showResultsButton && <ResultsBtn onPress={navigateToResultsHandler} />} */}
+      </ScrollView>
       <IconReturn />
     </MainBg>
   );

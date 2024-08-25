@@ -7,6 +7,7 @@ import GuessGameScreen from './GuessGameScreen';
 import GuessListScreen from './GuessListScreen';
 import QuizListScreen from './QuizListScreen';
 import QuizGameScreen from './QuizGameScreen';
+import ResultsScreen from './ResultsScreen';
 
 export {
   HomeScreen,
@@ -17,4 +18,5 @@ export {
   GuessListScreen,
   QuizListScreen,
   QuizGameScreen,
+  ResultsScreen,
 };

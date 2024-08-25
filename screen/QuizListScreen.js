@@ -38,7 +38,7 @@ const QuizListScreen = () => {
   }
 
   return (
-    <MainBg>
+    <MainBg style={{alignItems: 'center'}}>
       <FlatList
         keyExtractor={item => item.id.toString()}
         renderItem={renderQuizList}

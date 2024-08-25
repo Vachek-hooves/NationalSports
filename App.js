@@ -8,10 +8,10 @@ import {
   HomeScreen,
   QuizGameScreen,
   QuizListScreen,
+  ResultsScreen,
   SaluteScreen,
 } from './screen';
-import {SportProvider, useSportContext} from './store/sport_context';
-import {SportContext} from './store/sport_context';
+import {SportProvider} from './store/sport_context';
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -36,6 +36,7 @@ function App() {
           <Stack.Screen name="QuizGameScreen" component={QuizGameScreen} />
           <Stack.Screen name="GuessListScreen" component={GuessListScreen} />
           <Stack.Screen name="GuessGameScreen" component={GuessGameScreen} />
+          <Stack.Screen name="ResultsScreen" component={ResultsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SportProvider>

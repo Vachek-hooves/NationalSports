@@ -1,16 +1,15 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React from 'react';
 import {Color} from '../../constants/colors';
 
-const NextBtn = ({onPress}) => {
+const ResultsBtn = ({onPress}) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <Text style={styles.text}>NextBtn</Text>
+      <Text style={styles.text}>ResultsBtn</Text>
     </TouchableOpacity>
   );
 };
 
-export default NextBtn;
+export default ResultsBtn;
 
 const styles = StyleSheet.create({
   text: {

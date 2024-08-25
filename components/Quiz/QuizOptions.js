@@ -1,5 +1,6 @@
 import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
+import {Color} from '../../constants/colors';
 
 const QuizOptions = ({
   options,
@@ -10,20 +11,18 @@ const QuizOptions = ({
 }) => {
   return (
     <View style={styles.container}>
-      <FlatList
-        data={options}
-        renderItem={({item, index}) => (
+      {options.map((item, i) => {
+        return (
           <TouchableOpacity
-            key={index}
+            key={i}
             style={styles.option}
-            onPress={() => onPress(item, index)}
-            disabled={disable}>
-            <Text>{item}</Text>
+            onPress={() => onPress(item)}
+            disabled={disable}
+          >
+            <Text style={styles.text}>{item}</Text>
           </TouchableOpacity>
-        )}
-        keyExtractor={(item, index) => index.toString()}
-        showsHorizontalScrollIndicator={false}
-      />
+        );
+      })}
     </View>
   );
 };
@@ -37,9 +36,15 @@ const styles = StyleSheet.create({
   option: {
     marginHorizontal: 10,
     padding: 20,
-    backgroundColor: '#ddd',
+    backgroundColor: Color.milk,
     borderRadius: 10,
     alignItems: 'center',
-    marginVertical: 20,
+    marginVertical: 10,
+  },
+  text: {
+    color: Color.blue,
+    fontSize: 20,
+    fontWeight: '600',
+   
   },
 });

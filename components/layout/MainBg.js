@@ -3,16 +3,19 @@ import {BlueBg, MainImageBg} from '../ui';
 
 const {height} = Dimensions.get('screen');
 
-const MainBg = ({children}) => {
+const MainBg = ({children, style}) => {
   return (
     <BlueBg>
       <MainImageBg />
       <View
-        style={{
-          height: height,
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
+        style={[
+          style,
+          {
+            height: height,
+            // alignItems: 'center',
+            justifyContent: 'center',
+          },
+        ]}>
         {children}
       </View>
     </BlueBg>
