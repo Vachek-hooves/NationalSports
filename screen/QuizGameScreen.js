@@ -40,12 +40,15 @@ const QuizGameScreen = ({route, navigation}) => {
     });
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
-  // console.log('QuizGameScreen', showResultsButton);
 
   return (
-    <MainBg>
-      <ScrollView contentContainerStyle={{padding: 10}}>
-        <QuizProgress progress={progress} length={questionBox.length} />
+    <MainBg style={{alignItems:'center'}}>
+      <ScrollView >
+        <QuizProgress
+          progress={progress}
+          length={questionBox.length}
+          questionNum={currentIndex + 1}
+        />
         <QuizQuestion question={question} />
         <QuizOptions
           options={options}
@@ -54,7 +57,6 @@ const QuizGameScreen = ({route, navigation}) => {
           disable={isOptionOff}
           correctOption={correctOption}
         />
-        {/* {!isLastQuestion && nextBtnActive && <NextBtn onPress={nextQuestion} />} */}
         {!isLastQuestion && nextBtnActive && (
           <QuizBtn onPress={nextQuestion}>NEXT</QuizBtn>
         )}
