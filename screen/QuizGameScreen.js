@@ -1,22 +1,15 @@
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {useState} from 'react';
 import {MainBg} from '../components/layout';
 import {IconReturn} from '../components/icons';
 import useQuizGame from '../hooks/useQuizGame';
 import {useSportContext} from '../store/sport_context';
-import {Color} from '../constants/colors';
-import {
-  NextBtn,
-  QuizOptions,
-  QuizQuestion,
-  RestartBtn,
-  ResultsBtn,
-} from '../components/Quiz';
+import {QuizOptions, QuizProgress, QuizQuestion} from '../components/Quiz';
 import {QuizBtn} from '../components/ui';
 
 const QuizGameScreen = ({route, navigation}) => {
   const levelId = route.params;
-  const {quiz} = useSportContext();
+  // const {quiz} = useSportContext();
   const {
     validationCheck,
     nextQuestion,
@@ -33,6 +26,7 @@ const QuizGameScreen = ({route, navigation}) => {
     score,
     nextBtnActive,
     showResultsButton,
+    progress,
   } = generalState;
 
   const question = questionBox[currentIndex].question || '';
@@ -46,11 +40,12 @@ const QuizGameScreen = ({route, navigation}) => {
     });
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
-  console.log('QuizGameScreen', showResultsButton);
+  // console.log('QuizGameScreen', showResultsButton);
 
   return (
     <MainBg>
       <ScrollView contentContainerStyle={{padding: 10}}>
+        <QuizProgress progress={progress} length={questionBox.length} />
         <QuizQuestion question={question} />
         <QuizOptions
           options={options}
@@ -63,12 +58,10 @@ const QuizGameScreen = ({route, navigation}) => {
         {!isLastQuestion && nextBtnActive && (
           <QuizBtn onPress={nextQuestion}>NEXT</QuizBtn>
         )}
-        {isLastQuestion && (
+        {isLastQuestion && showResultsButton && (
           <View style={{flexDirection: 'row', flex: 1, gap: 20}}>
             <QuizBtn onPress={restartHandle}>Restart</QuizBtn>
             <QuizBtn onPress={navigateToResultsHandler}>Results</QuizBtn>
-            {/* <ResultsBtn onPress={navigateToResultsHandler} style={{flex: 1}} /> */}
-            {/* <RestartBtn onPress={restartHandle} /> */}
           </View>
         )}
       </ScrollView>
