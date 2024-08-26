@@ -4,7 +4,6 @@ import {useSportContext} from '../store/sport_context';
 import {IMAGES_QUIZ} from '../data/data';
 
 const useQuizGame = levelId => {
-  //   console.log('useQuizGame', levelId);
   const {quiz} = useSportContext();
   const thisLevel = quiz.find(item => item.id === levelId) || [];
   const questionBox = thisLevel.levelQuestions;
@@ -21,6 +20,7 @@ const useQuizGame = levelId => {
     showResultsButton: false,
     progress: new Animated.Value(0),
     quizBgImage: imageObject,
+    readStory: false,
   });
 
   const validationCheck = choosenOption => {
@@ -53,7 +53,8 @@ const useQuizGame = levelId => {
         isOptionOff: true,
         score: isCorrect ? prevState.score + 1 : prevState.score,
         nextBtnActive: !isLastQuestion, // active if not last question
-        showResultsButton: isLastQuestion && choosenOption !== null, //
+        showResultsButton: isLastQuestion && choosenOption !== null,
+        readStory: isCorrect,
       };
     });
   };
