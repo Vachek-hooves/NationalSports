@@ -1,12 +1,5 @@
-import {
-  FlatList,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  Animated,
-} from 'react-native';
-import React, {useState} from 'react';
+import {StyleSheet, Text, TouchableOpacity, View, Animated} from 'react-native';
+import {useState} from 'react';
 import {Color} from '../../constants/colors';
 
 const QuizOptions = ({

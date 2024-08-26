@@ -1,12 +1,15 @@
 import {Animated, StyleSheet, Text, View} from 'react-native';
 import {useState} from 'react';
 import {useSportContext} from '../store/sport_context';
+import {IMAGES_QUIZ} from '../data/data';
 
 const useQuizGame = levelId => {
   //   console.log('useQuizGame', levelId);
   const {quiz} = useSportContext();
   const thisLevel = quiz.find(item => item.id === levelId) || [];
   const questionBox = thisLevel.levelQuestions;
+  // console.log(IMAGES_QUIZ.find(image => image.id === levelId));
+  const imageObject = IMAGES_QUIZ.find(image => image.id === levelId);
 
   const [generalState, setGeneralState] = useState({
     currentIndex: 0,
@@ -17,6 +20,7 @@ const useQuizGame = levelId => {
     nextBtnActive: false,
     showResultsButton: false,
     progress: new Animated.Value(0),
+    quizBgImage: imageObject,
   });
 
   const validationCheck = choosenOption => {

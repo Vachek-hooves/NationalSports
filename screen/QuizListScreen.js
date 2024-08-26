@@ -31,7 +31,7 @@ const QuizListScreen = () => {
           source={item.image}
           style={styles.image}
           resizeMode="cover">
-          <Text>{item.sport}</Text>
+          <Text style={styles.text}>{item.sport}</Text>
         </ImageBackground>
       </TouchableOpacity>
     );
@@ -76,4 +76,5 @@ const styles = StyleSheet.create({
   footer: {
     height: 10,
   },
+  text: {fontSize: 32, fontWeight: '900', color: Color.milk, letterSpacing: 8},
 });
