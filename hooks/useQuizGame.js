@@ -30,13 +30,13 @@ const useQuizGame = levelId => {
 
       if (isLastQuestion) {
         Animated.timing(prevState.progress, {
-          toValue: questionBox.length, // Прогрес дорівнює кількості всіх питань
+          toValue: questionBox.length,
           duration: 600,
           useNativeDriver: false,
         }).start();
       } else {
         Animated.timing(prevState.progress, {
-          toValue: prevState.currentIndex + 1, // Прогрес оновлюється на кожне нове питання
+          toValue: prevState.currentIndex + 1, // updates on every new question
           duration: 600,
           useNativeDriver: false,
         }).start();
@@ -47,13 +47,9 @@ const useQuizGame = levelId => {
         currentOption: choosenOption,
         correctOption: questionBox[prevState.currentIndex].correctAnswer,
         isOptionOff: true,
-        // nextBtnActive: true,
         score: isCorrect ? prevState.score + 1 : prevState.score,
-        // nextBtnActive: !isLastQuestion,
-        // showResultsButton: isLastQuestion,
-
-        nextBtnActive: !isLastQuestion, // Next button should be active if not the last question
-        showResultsButton: isLastQuestion && choosenOption !== null, // Show results button if on last question and option chosen
+        nextBtnActive: !isLastQuestion, // active if not last question
+        showResultsButton: isLastQuestion && choosenOption !== null, //
       };
     });
   };
@@ -61,22 +57,15 @@ const useQuizGame = levelId => {
   const nextQuestion = () => {
     setGeneralState(prevState => {
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
-      // console.log('useQuizGame', isLastQuestion);
-      console.log(prevState.currentIndex, questionBox.length - 1);
 
       if (!isLastQuestion) {
         return {
           ...prevState,
-          // currentIndex: isLastQuestion
-          //   ? prevState.currentIndex
-          //   : prevState.currentIndex + 1,
           currentIndex: prevState.currentIndex + 1,
           currentOption: null,
           correctOption: null,
           isOptionOff: false,
           nextBtnActive: false,
-
-          // currentIndex: isLastQuestion ? prevState.currentIndex : prevState.currentIndex + 1,
           showResultsButton: isLastQuestion
             ? prevState.showResultsButton
             : false,
