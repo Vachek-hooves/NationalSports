@@ -1,16 +1,15 @@
 import {Animated, StyleSheet, Text, View} from 'react-native';
 import {useState} from 'react';
 import {useSportContext} from '../store/sport_context';
-import {IMAGES_QUIZ} from '../data/data';
+import {IMAGES_GUESS} from '../data/data';
 
-const useQuizGame = levelId => {
-  const {quiz} = useSportContext();
-  const thisLevel = quiz.find(item => item.id === levelId) || [];
+const useGuessGame = levelId => {
+  const {guess} = useSportContext();
+  const thisLevel = guess.find(item => item.id === levelId) || [];
   const questionBox = thisLevel.levelQuestions;
-  // console.log(IMAGES_QUIZ.find(image => image.id === levelId));
-  const imageObject = IMAGES_QUIZ.find(image => image.id === levelId);
+  const imageObject = IMAGES_GUESS.find(image => image.id === levelId);
 
-  const [generalState, setGeneralState] = useState({
+  const [guessState, setGuessState] = useState({
     currentIndex: 0,
     currentOption: null,
     correctOption: null,
@@ -20,18 +19,13 @@ const useQuizGame = levelId => {
     showResultsButton: false,
     progress: new Animated.Value(0),
     quizBgImage: imageObject,
-    readStory: false,
-    fact: questionBox[0]?.interestingFact || null,
   });
 
   const validationCheck = choosenOption => {
-    // console.log(choosenOption);
-    setGeneralState(prevState => {
+    setGuessState(prevState => {
       const isCorrect =
-        choosenOption === questionBox[prevState.currentIndex].correctAnswer;
+        choosenOption === questionBox[prevState.currentIndex].answer;
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
-      const isOptionChosenOnLastQuestion =
-        isLastQuestion && choosenOption !== null;
 
       if (isLastQuestion) {
         Animated.timing(prevState.progress, {
@@ -50,26 +44,19 @@ const useQuizGame = levelId => {
       return {
         ...prevState,
         currentOption: choosenOption,
-        correctOption: questionBox[prevState.currentIndex].correctAnswer,
+        correctOption: questionBox[prevState.currentIndex].answer,
         isOptionOff: true,
         score: isCorrect ? prevState.score + 1 : prevState.score,
         nextBtnActive: !isLastQuestion, // active if not last question
         showResultsButton: isLastQuestion && choosenOption !== null,
-        readStory: isCorrect,
       };
     });
   };
 
   const nextQuestion = () => {
-    setGeneralState(prevState => {
+    setGuessState(prevState => {
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
-
-      const factIndex = isLastQuestion
-        ? prevState.currentIndex
-        : prevState.currentIndex + 1;
-      const newFact = questionBox[factIndex]?.interestingFact || null;
-
-      if (!isLastQuestion) {
+      if (isLastQuestion) {
         return {
           ...prevState,
           currentIndex: prevState.currentIndex + 1,
@@ -80,8 +67,6 @@ const useQuizGame = levelId => {
           showResultsButton: isLastQuestion
             ? prevState.showResultsButton
             : false,
-          readStory: false,
-          fact: newFact,
         };
       } else {
         return {
@@ -93,8 +78,8 @@ const useQuizGame = levelId => {
     });
   };
 
-  const restartHandle = () => {
-    setGeneralState({
+  const restartHandle = () => [
+    setGuessState({
       currentIndex: 0,
       currentOption: null,
       correctOption: null,
@@ -103,18 +88,19 @@ const useQuizGame = levelId => {
       nextBtnActive: false,
       showResultsButton: false,
       progress: new Animated.Value(0),
-      quizBgImage: imageObject,
-    });
-  };
+    }),
+  ];
 
   return {
     validationCheck,
     nextQuestion,
     restartHandle,
-    generalState,
+    guessState,
     thisLevel,
     questionBox,
   };
 };
 
-export default useQuizGame;
+export default useGuessGame;
+
+const styles = StyleSheet.create({});
