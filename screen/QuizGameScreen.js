@@ -54,8 +54,9 @@ const QuizGameScreen = ({route, navigation}) => {
   const navigateToResultsHandler = () => {
     navigation.navigate('ResultsScreen', {
       score,
-      name: questionBox.name,
+      name: thisLevel.name,
       totalQuestions: questionBox.length,
+      image: quizBgImage.image,
     });
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
@@ -86,9 +87,6 @@ const QuizGameScreen = ({route, navigation}) => {
             <QuizBtn onPress={nextQuestion}>NEXT</QuizBtn>
           )}
           {readStory && (
-            // <TouchableOpacity onPress={() => setModal(true)}>
-            //   <Text>READ FACT</Text>
-            // </TouchableOpacity>
             <QuizBtn onPress={() => setModal(true)}>READ FACT</QuizBtn>
           )}
           <InterestingFact

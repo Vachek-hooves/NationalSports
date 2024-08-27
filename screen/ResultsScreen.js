@@ -1,11 +1,25 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  SafeAreaView,
+} from 'react-native';
+import {Color} from '../constants/colors';
 
-const ResultsScreen = () => {
+const ResultsScreen = ({route}) => {
+  console.log(route.params);
+  const SCORE = route.params.score;
+  const IMAGE = route.params.image;
   return (
-    <View >
-      <Text>ResultsScreen</Text>
-    </View>
+    <ImageBackground
+      source={IMAGE}
+      style={{flex: 1, backgroundColor: Color.blue}}
+      imageStyle={{opacity: 0.3}}>
+      <SafeAreaView>
+        <Text>{SCORE}</Text>
+      </SafeAreaView>
+    </ImageBackground>
   );
 };
 

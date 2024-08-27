@@ -1,28 +1,38 @@
 export const IMAGES_QUIZ = [
   {
     id: 'q1',
-    sport: 'Formula 1',
+    sport: 'Formula',
     image: require('../assets/img/quizbg/Formula.jpg'),
+    Formula: require('../assets/img/icons/FormulaPrize.png'),
+    iconName: 'FormulaPrize',
   },
   {
     id: 'w1',
     sport: 'Golf',
     image: require('../assets/img/quizbg/golf1.jpg'),
+    Golf: require('../assets/img/icons/GulfPrize.png'),
+    iconName: 'GulfPrize',
   },
   {
     id: 'e1',
     sport: 'Rugby',
     image: require('../assets/img/quizbg/rugby.jpg'),
+    Rugby: require('../assets/img/icons/RugbyPrize.png'),
+    iconName: 'RugbyPrize',
   },
   {
     id: 'r1',
     sport: 'Boxing',
     image: require('../assets/img/quizbg/boxing.jpg'),
+    Boxing: require('../assets/img/icons/boxingPrize.png'),
+    iconName: 'boxingPrize',
   },
   {
     id: 't1',
     sport: 'UFC',
     image: require('../assets/img/quizbg/UFC.jpg'),
+    UFC: require('../assets/img/icons/ufcPrize.png'),
+    iconName: 'ufcPrizes',
   },
 ];
 
@@ -31,34 +41,45 @@ export const IMAGES_GUESS = [
     id: 'fo1',
     sport: 'Football',
     image: require('../assets/img/quizbg/football.jpg'),
+    Football: require('../assets/img/icons/footballPrize.png'),
+    iconName: '',
   },
   {
     id: 'b1',
     sport: 'Basketball',
     image: require('../assets/img/quizbg/basketball.jpg'),
+    Basketball: require('../assets/img/icons/basketballPrize.png'),
+    iconName: '',
   },
   {
     id: 'v1',
     sport: 'Volleyball',
     image: require('../assets/img/quizbg/voleyball.jpg'),
+    Volleyball: require('../assets/img/icons/volleyPrize.png'),
+    iconName: '',
   },
   {
     id: 'ba1',
     sport: 'Baseball',
     image: require('../assets/img/quizbg/baseball.jpg'),
+    Baseball: require('../assets/img/icons/basketballPrize.png'),
+    iconName: '',
   },
   {
     id: 'ho1',
     sport: 'Hockey',
     image: require('../assets/img/quizbg/hockey.jpg'),
+    Hockey: require('../assets/img/icons/hockeyPrize.png'),
+    iconName: '',
   },
 ];
 
 export const QUIZ_DATA = [
   {
+    score: '0',
     close: false,
     id: 'q1',
-    name: 'Formula 1',
+    name: 'Formula',
     levelQuestions: [
       {
         interestingFact:
@@ -168,6 +189,7 @@ export const QUIZ_DATA = [
     ],
   },
   {
+    score: '0',
     close: false,
     id: 'w1',
     name: 'Golf',
@@ -277,6 +299,7 @@ export const QUIZ_DATA = [
     ],
   },
   {
+    score: '0',
     close: false,
     id: 'e1',
     name: 'Rugby',
@@ -388,6 +411,7 @@ export const QUIZ_DATA = [
     ],
   },
   {
+    score: '0',
     close: false,
     id: 'r1',
     name: 'Boxing',
@@ -508,6 +532,7 @@ export const QUIZ_DATA = [
     ],
   },
   {
+    score: '0',
     close: false,
     id: 't1',
     name: 'UFC',
