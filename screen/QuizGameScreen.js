@@ -4,18 +4,25 @@ import {
   StyleSheet,
   View,
   Text,
+  TouchableOpacity,
 } from 'react-native';
 import {useState} from 'react';
 import {MainBg} from '../components/layout';
 import {IconReturn} from '../components/icons';
 import useQuizGame from '../hooks/useQuizGame';
 import {useSportContext} from '../store/sport_context';
-import {QuizOptions, QuizProgress, QuizQuestion} from '../components/Quiz';
+import {
+  InterestingFact,
+  QuizOptions,
+  QuizProgress,
+  QuizQuestion,
+} from '../components/Quiz';
 import {QuizBtn} from '../components/ui';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Color} from '../constants/colors';
 
 const QuizGameScreen = ({route, navigation}) => {
+  const [modal, setModal] = useState(false);
   const levelId = route.params;
   // const {quiz} = useSportContext();
   const {
@@ -37,6 +44,8 @@ const QuizGameScreen = ({route, navigation}) => {
     progress,
     quizBgImage,
     readStory,
+    fact,
+    // modal,
   } = generalState;
 
   const question = questionBox[currentIndex].question || '';
@@ -51,18 +60,11 @@ const QuizGameScreen = ({route, navigation}) => {
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
 
-  console.log(readStory);
-
   return (
     // <MainBg style={{alignItems: 'center'}}>
     <ImageBackground
       source={quizBgImage.image}
-      style={{
-        width: '100%',
-        height: '100%',
-        flex: 1,
-        backgroundColor: Color.blue,
-      }}
+      style={styles.bgImage}
       imageStyle={{opacity: 0.3}}
       resizeMode="cover">
       <SafeAreaView>
@@ -84,10 +86,17 @@ const QuizGameScreen = ({route, navigation}) => {
             <QuizBtn onPress={nextQuestion}>NEXT</QuizBtn>
           )}
           {readStory && (
-            <Text style={{color: Color.milk, fontWeight: '800', fontSize: 24}}>
-              READ INTERESTING FACT
-            </Text>
+            // <TouchableOpacity onPress={() => setModal(true)}>
+            //   <Text>READ FACT</Text>
+            // </TouchableOpacity>
+            <QuizBtn onPress={() => setModal(true)}>READ FACT</QuizBtn>
           )}
+          <InterestingFact
+            visible={modal}
+            close={() => setModal(false)}
+            bgImage={quizBgImage.image}
+            fact={fact}
+          />
           {isLastQuestion && showResultsButton && (
             <View style={{flexDirection: 'row', flex: 1, gap: 20}}>
               <QuizBtn onPress={restartHandle}>Restart</QuizBtn>
@@ -104,4 +113,11 @@ const QuizGameScreen = ({route, navigation}) => {
 
 export default QuizGameScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  bgImage: {
+    width: '100%',
+    height: '100%',
+    flex: 1,
+    backgroundColor: Color.blue,
+  },
+});

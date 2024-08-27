@@ -12,7 +12,6 @@ const QuizBtn = ({children, style, onPress}) => {
 export default QuizBtn;
 
 const styles = StyleSheet.create({
-  btn: {borderWidth: 1, flex: 1, borderColor: Color.milk, borderRadius: 8},
   text: {
     color: Color.milk,
     fontSize: 22,
@@ -26,5 +25,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     backgroundColor: Color.ocean,
     paddingVertical: 8,
+    // marginBottom:5
+    marginVertical: 15,
   },
 });

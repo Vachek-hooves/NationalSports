@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     // backgroundColor: Color.milk,
-    marginVertical: 10,
+    // marginVertical: 8,
     borderRadius: 22,
   },
   progressContainer: {

@@ -21,6 +21,7 @@ const useQuizGame = levelId => {
     progress: new Animated.Value(0),
     quizBgImage: imageObject,
     readStory: false,
+    fact: questionBox[0]?.interestingFact || null,
   });
 
   const validationCheck = choosenOption => {
@@ -63,6 +64,11 @@ const useQuizGame = levelId => {
     setGeneralState(prevState => {
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
 
+      const factIndex = isLastQuestion
+        ? prevState.currentIndex
+        : prevState.currentIndex + 1;
+      const newFact = questionBox[factIndex]?.interestingFact || null;
+
       if (!isLastQuestion) {
         return {
           ...prevState,
@@ -74,6 +80,8 @@ const useQuizGame = levelId => {
           showResultsButton: isLastQuestion
             ? prevState.showResultsButton
             : false,
+          readStory: false,
+          fact: newFact,
         };
       } else {
         return {

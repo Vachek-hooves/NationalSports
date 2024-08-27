@@ -62,7 +62,7 @@ export const QUIZ_DATA = [
     levelQuestions: [
       {
         interestingFact:
-          "Lewis Hamilton's 2020 victory marked his seventh World Championship, tying him with Michael Schumacher for the most titles in F1 history",
+          "Lewis Hamilton's 2020 victory marked his seventh World Championship, trying him with Michael Schumacher for the most titles in F1 history",
         id: 'qq1',
         question: 'Who won the Formula 1 World Championship in 2020?',
         options: [
