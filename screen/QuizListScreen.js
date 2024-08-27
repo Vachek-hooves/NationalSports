@@ -16,6 +16,7 @@ import {useNavigation} from '@react-navigation/native';
 const {width, height} = Dimensions.get('screen');
 const WIDTH = width * 0.8;
 const HEIGHT = height * 0.09;
+const ITEM_HEIGHT = height * 0.2;
 
 const QuizListScreen = () => {
   const navigation = useNavigation();
@@ -58,7 +59,7 @@ export default QuizListScreen;
 const styles = StyleSheet.create({
   image: {
     width: WIDTH,
-    height: 200,
+    height: ITEM_HEIGHT,
     padding: 20,
     justifyContent: 'center',
     alignItems: 'center',

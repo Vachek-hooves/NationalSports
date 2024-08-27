@@ -32,7 +32,7 @@ const AthleteScreen = () => {
             <Text style={styles.subText}>score</Text>
             <Text style={styles.scoreNum}>{score}</Text>
           </View>
-          {score >= 0 ? (
+          {score > 8 ? (
             <View style={styles.iconContainer}>
               <Image source={image[item.name]} style={styles.icon} />
             </View>

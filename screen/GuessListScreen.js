@@ -1,6 +1,16 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  ImageBackground,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import {MainBg} from '../components/layout';
+import {IMAGES_GUESS} from '../data/data';
+import {Color} from '../constants/colors';
+import {IconReturn} from '../components/icons';
 
 const GuessListScreen = () => {
   return <MainBg></MainBg>;
