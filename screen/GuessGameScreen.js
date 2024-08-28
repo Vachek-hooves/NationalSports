@@ -16,9 +16,10 @@ import {QuizBtn} from '../components/ui';
 import {useSportContext} from '../store/sport_context';
 
 const GuessGameScreen = ({route, navigation}) => {
+  const {mode, id} = route.params;
   const {ulockNextAddScore} = useSportContext();
   const [modal, setModal] = useState(false);
-  const levelId = route.params;
+  // const levelId = route.params.id;
   const {
     validationCheck,
     nextQuestion,
@@ -26,7 +27,7 @@ const GuessGameScreen = ({route, navigation}) => {
     thisLevel,
     questionBox,
     guessState,
-  } = useGuessGame(levelId);
+  } = useGuessGame(id);
   const {
     currentIndex,
     currentOption,
@@ -40,11 +41,12 @@ const GuessGameScreen = ({route, navigation}) => {
     correctPerson,
   } = guessState;
 
-  const guessQuestion = thisLevel.task;
   // const question = questionBox[currentIndex].question || '';
+  const guessQuestion = thisLevel.task;
   // const options = questionBox[currentIndex].options || [];
   const guessOptions = questionBox[currentIndex].options;
   const guessPerson = questionBox[currentIndex].answer.person;
+  console.log(guessOptions);
 
   const navigateToResultsHandler = () => {
     navigation.navigate('ResultsScreen', {
@@ -56,7 +58,7 @@ const GuessGameScreen = ({route, navigation}) => {
   };
 
   const activeNextLevelCall = () => {
-    ulockNextAddScore(levelId, score, 'guess');
+    ulockNextAddScore(id, score, mode);
     navigation.navigate('GuessListScreen');
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
@@ -92,7 +94,7 @@ const GuessGameScreen = ({route, navigation}) => {
               <QuizBtn onPress={navigateToResultsHandler}>Results</QuizBtn>
             </View>
           )}
-          {isLastQuestion && score > 2 && showResultsButton && (
+          {isLastQuestion && score > 7 && showResultsButton && (
             <TouchableOpacity onPress={activeNextLevelCall}>
               <Text>UNLOCK NEXT LEVEL</Text>
             </TouchableOpacity>

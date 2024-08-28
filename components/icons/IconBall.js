@@ -2,11 +2,11 @@ import {Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {Color} from '../../constants/colors';
 import {useNavigation} from '@react-navigation/native';
 
-const IconBall = ({screen, children}) => {
+const IconBall = ({screen, children, mode}) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate(`${screen}`)}
+      onPress={() => navigation.navigate(`${screen}`, mode)}
       activeOpacity={0.5}
       style={styles.btnStyle}>
       <Image

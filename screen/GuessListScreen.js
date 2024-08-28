@@ -18,7 +18,8 @@ const WIDTH = width * 0.8;
 const HEIGHT = height * 0.09;
 const ITEM_HEIGHT = height * 0.2;
 
-const GuessListScreen = ({navigation}) => {
+const GuessListScreen = ({navigation, route}) => {
+  const mode = route.params;
   const {guess} = useSportContext();
   function renderListGuess({item}) {
     const guessData = guess.find(gues => gues.id === item.id);
@@ -33,7 +34,7 @@ const GuessListScreen = ({navigation}) => {
           styles.btnStyle,
           {borderColor: lockedGame ? 'black' : Color.milk},
         ]}
-        onPress={() => navigation.navigate('GuessGameScreen', id)}
+        onPress={() => navigation.navigate('GuessGameScreen', {id, mode})}
         disabled={lockedGame}>
         <ImageBackground
           source={item.image}

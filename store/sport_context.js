@@ -7,6 +7,7 @@ export const SportContext = createContext({});
 export const SportProvider = ({children}) => {
   const [quiz, setQuiz] = useState([]);
   const [guess, setGuess] = useState([]);
+  console.log(guess);
 
   useEffect(() => {
     const launchData = async () => {
@@ -52,7 +53,7 @@ export const SportProvider = ({children}) => {
         console.log(`updated ${game} data`, updatedData);
 
         await saveGameData(updatedData, game);
-        
+
         switch (game) {
           case 'guess':
             setGuess(updatedData);
