@@ -34,10 +34,10 @@ const Scoreboard = ({data, header}) => {
 
   function renderPrizeList({item}) {
     const id = item.id;
-    console.log('item-', item.name);
+    // console.log('item-', item.name);
 
     const images = gameImages.find(image => image.id === id);
-    console.log(images);
+    // console.log(images);
     const score = item.score;
     // console.log(gameImages);
 
@@ -55,7 +55,7 @@ const Scoreboard = ({data, header}) => {
               <Text style={styles.scoreNum}>{score}</Text>
             </View>
             <Text style={styles.nameText}>{item.name}</Text>
-            {score >= 0 ? (
+            {score >= 8 ? (
               <View style={styles.iconContainer}>
                 {images && images[item.name] ? (
                   <Image source={images[item.name]} style={styles.icon} />

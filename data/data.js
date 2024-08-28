@@ -1503,7 +1503,7 @@ export const MATCH_DATA = [
               'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/New_York_Yankees_logo.svg/1200px-New_York_Yankees_logo.svg.png',
           },
           {
-            club: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Texas_Rangers_logo.png',
+            club: 'Texas Rangers',
             image:
               'https://upload.wikimedia.org/wikipedia/commons/d/d3/Texas_Rangers_logo.png',
           },
@@ -1549,7 +1549,7 @@ export const MATCH_DATA = [
           {
             club: 'Montreal Canadiens',
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/6/69/Montreal_Canadiens.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkz6w3V3qo2-L3xaTb_MCj4eQtprHcsi6BPw&s',
           },
           {
             club: 'Tampa Bay Lightning',
@@ -1609,7 +1609,7 @@ export const MATCH_DATA = [
           {
             club: 'Montreal Canadiens',
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/6/69/Montreal_Canadiens.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkz6w3V3qo2-L3xaTb_MCj4eQtprHcsi6BPw&s',
           },
           {
             club: 'New York Rangers',
@@ -1644,7 +1644,7 @@ export const MATCH_DATA = [
           {
             club: 'Montreal Canadiens',
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/6/69/Montreal_Canadiens.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkz6w3V3qo2-L3xaTb_MCj4eQtprHcsi6BPw&s',
           },
           {
             club: 'Pittsburgh Penguins',
