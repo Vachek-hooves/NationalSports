@@ -57,6 +57,7 @@ const GuessGameScreen = ({route, navigation}) => {
 
   const activeNextLevelCall = () => {
     ulockNextAddScore(levelId, score, 'guess');
+    navigation.navigate('GuessListScreen');
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
 

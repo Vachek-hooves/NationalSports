@@ -21,8 +21,8 @@ export const SportProvider = ({children}) => {
         setQuiz(quizData);
 
         if (guessData.length === 0) {
-          await saveGameData(MATCH_DATA, 'quess');
-          guessData = await getGameData('quess');
+          await saveGameData(MATCH_DATA, 'guess');
+          guessData = await getGameData('guess');
         }
         setGuess(guessData);
       } catch (error) {
@@ -34,8 +34,9 @@ export const SportProvider = ({children}) => {
 
   const ulockNextAddScore = async (id, score, game) => {
     console.log(id, score, game);
+    console.log(guess);
     try {
-      const data = await getGameData(game.toString());
+      const data = await getGameData(game);
       console.log(data);
       const currentIndex = data.findIndex(item => item.id === id);
       if (currentIndex !== -1) {
@@ -49,7 +50,19 @@ export const SportProvider = ({children}) => {
         });
         console.log('fn completed');
         console.log(`updated ${game} data`, updatedData);
+
         await saveGameData(updatedData, game);
+        
+        switch (game) {
+          case 'guess':
+            setGuess(updatedData);
+            break;
+          case 'quiz':
+            setQuiz(updatedData);
+            break;
+          default:
+            break;
+        }
       }
     } catch (error) {
       console.error('Error to update game', error);

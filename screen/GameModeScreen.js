@@ -6,8 +6,12 @@ const GameModeScreen = () => {
   return (
     <MainBg>
       <View>
-        <IconBall screen={'GuessListScreen'}>QUESS</IconBall>
-        <IconBall screen={'QuizListScreen'}>QUIZ</IconBall>
+        <IconBall screen={'GuessListScreen'} mode={'guess'}>
+          QUESS
+        </IconBall>
+        <IconBall screen={'QuizListScreen'} mode={'quiz'}>
+          QUIZ
+        </IconBall>
       </View>
       <IconReturn />
     </MainBg>

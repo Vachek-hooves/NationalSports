@@ -11,6 +11,7 @@ export const saveGameData = async (data, key) => {
 export const getGameData = async key => {
   try {
     const data = await AsyncStorage.getItem(key);
+    // console.log('asyncStorageUtils-',data)
     return data != null ? JSON.parse(data) : [];
   } catch (error) {
     throw new Error(`Game data fetching of ${key} error`);
