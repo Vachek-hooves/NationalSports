@@ -10,7 +10,7 @@ import {
 import {MainBg} from '../components/layout';
 import {IMAGES_GUESS} from '../data/data';
 import {Color} from '../constants/colors';
-import {IconClose, IconReturn} from '../components/icons';
+import {IconClose, IconReboot, IconReturn} from '../components/icons';
 import {useSportContext} from '../store/sport_context';
 
 const {width, height} = Dimensions.get('screen');
@@ -29,12 +29,12 @@ const GuessListScreen = ({navigation, route}) => {
     const id = item.id;
     return (
       <TouchableOpacity
+        onPress={() => navigation.navigate('GuessGameScreen', {id, mode})}
         activeOpacity={0.6}
         style={[
           styles.btnStyle,
           {borderColor: lockedGame ? 'black' : Color.milk},
         ]}
-        onPress={() => navigation.navigate('GuessGameScreen', {id, mode})}
         disabled={lockedGame}>
         <ImageBackground
           source={item.image}
@@ -63,6 +63,7 @@ const GuessListScreen = ({navigation, route}) => {
         contentContainerStyle={styles.listContent}
       />
       <View style={{margin: HEIGHT}}></View>
+      <IconReboot mode={mode} />
       <IconReturn />
     </MainBg>
   );

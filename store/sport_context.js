@@ -7,7 +7,7 @@ export const SportContext = createContext({});
 export const SportProvider = ({children}) => {
   const [quiz, setQuiz] = useState([]);
   const [guess, setGuess] = useState([]);
-  console.log(guess);
+  
 
   useEffect(() => {
     const launchData = async () => {
@@ -69,7 +69,21 @@ export const SportProvider = ({children}) => {
       console.error('Error to update game', error);
     }
   };
-  const value = {quiz, guess, ulockNextAddScore};
+
+  const rebootGameHandler = async mode => {
+    try {
+      if (mode === 'guess') {
+        setGuess(MATCH_DATA);
+        saveGameData(MATCH_DATA, mode);
+      } else {
+        console.log('reboot quiz');
+        setQuiz(QUIZ_DATA);
+        saveGameData(QUIZ_DATA, mode);
+      }
+    } catch (error) {}
+  };
+
+  const value = {quiz, guess, ulockNextAddScore, rebootGameHandler};
   return (
     <SportContext.Provider value={value}>{children}</SportContext.Provider>
   );

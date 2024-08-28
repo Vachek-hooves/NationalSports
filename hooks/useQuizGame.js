@@ -1,4 +1,4 @@
-import {Animated, StyleSheet, Text, View} from 'react-native';
+import {Animated} from 'react-native';
 import {useState} from 'react';
 import {useSportContext} from '../store/sport_context';
 import {IMAGES_QUIZ} from '../data/data';

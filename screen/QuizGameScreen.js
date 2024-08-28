@@ -1,4 +1,11 @@
-import {ImageBackground, ScrollView, StyleSheet, View} from 'react-native';
+import {
+  ImageBackground,
+  ScrollView,
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import {useState} from 'react';
 import useQuizGame from '../hooks/useQuizGame';
 import {
@@ -10,10 +17,13 @@ import {
 import {QuizBtn} from '../components/ui';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Color} from '../constants/colors';
+import {useSportContext} from '../store/sport_context';
 
 const QuizGameScreen = ({route, navigation}) => {
+  const {mode, id} = route.params;
   const [modal, setModal] = useState(false);
-  const levelId = route.params;
+  const {ulockNextAddScore} = useSportContext();
+  // const levelId = route.params;
   // const {quiz} = useSportContext();
   const {
     validationCheck,
@@ -22,7 +32,7 @@ const QuizGameScreen = ({route, navigation}) => {
     generalState,
     thisLevel,
     questionBox,
-  } = useQuizGame(levelId);
+  } = useQuizGame(id);
   const {
     currentIndex,
     currentOption,
@@ -48,6 +58,10 @@ const QuizGameScreen = ({route, navigation}) => {
       totalQuestions: questionBox.length,
       image: quizBgImage.image,
     });
+  };
+  const activeNextLevelCall = () => {
+    ulockNextAddScore(id, score, mode);
+    navigation.navigate('QuizListScreen');
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
   console.log(score);
@@ -92,6 +106,9 @@ const QuizGameScreen = ({route, navigation}) => {
               <QuizBtn onPress={navigateToResultsHandler}>Results</QuizBtn>
             </View>
           )}
+          <TouchableOpacity onPress={activeNextLevelCall}>
+            <Text>UNLOCK NEXT LEVEL</Text>
+          </TouchableOpacity>
         </ScrollView>
       </SafeAreaView>
       {/* <IconReturn /> */}

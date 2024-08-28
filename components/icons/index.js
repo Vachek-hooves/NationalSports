@@ -3,5 +3,6 @@ import IconAthlete from './IconAthlete';
 import IconReturn from './IconReturn';
 import IconTrophy from './IconTrophy';
 import IconClose from './IconClose';
+import IconReboot from './IconReboot';
 
-export {IconBall, IconAthlete, IconReturn, IconTrophy, IconClose};
+export {IconBall, IconAthlete, IconReturn, IconTrophy, IconClose, IconReboot};

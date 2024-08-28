@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   SafeAreaView,
 } from 'react-native';
-import {useState} from 'react';
 import useGuessGame from '../hooks/useGuessGame';
 import {Color} from '../constants/colors';
 import {QuizOptions, QuizProgress, QuizQuestion} from '../components/Quiz';
@@ -18,7 +17,6 @@ import {useSportContext} from '../store/sport_context';
 const GuessGameScreen = ({route, navigation}) => {
   const {mode, id} = route.params;
   const {ulockNextAddScore} = useSportContext();
-  const [modal, setModal] = useState(false);
   // const levelId = route.params.id;
   const {
     validationCheck,

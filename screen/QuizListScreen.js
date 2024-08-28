@@ -10,30 +10,44 @@ import {
 import {MainBg} from '../components/layout';
 import {IMAGES_QUIZ} from '../data/data';
 import {Color} from '../constants/colors';
-import {IconReturn} from '../components/icons';
-import {useNavigation} from '@react-navigation/native';
+import {IconClose, IconReboot, IconReturn} from '../components/icons';
+import {useSportContext} from '../store/sport_context';
 
 const {width, height} = Dimensions.get('screen');
 const WIDTH = width * 0.8;
 const HEIGHT = height * 0.09;
 const ITEM_HEIGHT = height * 0.2;
 
-const QuizListScreen = () => {
-  const navigation = useNavigation();
+const QuizListScreen = ({navigation, route}) => {
+  const mode = route.params;
+  const {quiz} = useSportContext();
 
   function renderQuizList({item}) {
+    const quizData = quiz.find(q => q.id === item.id);
+    const lockedGame = !quizData.notLocked;
     const id = item.id;
     return (
       <TouchableOpacity
+        onPress={() => navigation.navigate('QuizGameScreen', {id, mode})}
         activeOpacity={0.6}
-        style={styles.btnStyle}
-        onPress={() => navigation.navigate('QuizGameScreen', id)}>
+        style={[
+          styles.btnStyle,
+          {borderColor: lockedGame ? 'black' : Color.milk},
+        ]}
+        disabled={lockedGame}>
         <ImageBackground
           source={item.image}
-          style={styles.image}
           resizeMode="cover"
-          >
-          <Text style={styles.text}>{item.sport}</Text>
+          imageStyle={{opacity: lockedGame ? 0.3 : 1}}
+          style={styles.image}>
+          {lockedGame && <IconClose />}
+          <Text
+            style={[
+              styles.text,
+              {color: lockedGame ? Color.milk + 10 : Color.milk},
+            ]}>
+            {item.sport}
+          </Text>
         </ImageBackground>
       </TouchableOpacity>
     );
@@ -50,6 +64,7 @@ const QuizListScreen = () => {
         // ListFooterComponent={<View style={styles.footer} />}
       />
       <View style={{margin: HEIGHT}}></View>
+      <IconReboot mode={mode} />
       <IconReturn />
     </MainBg>
   );
