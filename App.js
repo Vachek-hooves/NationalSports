@@ -22,7 +22,7 @@ function App() {
           screenOptions={{
             headerShown: false,
             animation: 'fade',
-            animationDuration: 600,
+            animationDuration: 400,
           }}>
           <Stack.Screen name="SaluteScreen" component={SaluteScreen} />
           <Stack.Screen

@@ -11,6 +11,7 @@ import {IMAGES_QUIZ, IMAGES_GUESS} from '../../data/data';
 import {Color} from '../../constants/colors';
 import {useEffect, useState} from 'react';
 import HeaderScoreboard from './HeaderScoreboard';
+import IconClick from '../icons/IconClick';
 
 const {width, height} = Dimensions.get('screen');
 const HEIGHT = height * 0.09;
@@ -67,8 +68,13 @@ const Scoreboard = ({data, header}) => {
   }
   return (
     <>
-      <TouchableOpacity onPress={seeDetails}>
+      <TouchableOpacity
+        onPress={seeDetails}
+        style={{position: 'relative', justifyContent: 'center'}}>
         <HeaderScoreboard>{header}</HeaderScoreboard>
+        <View style={{position: 'absolute', right: 0}}>
+          <IconClick />
+        </View>
       </TouchableOpacity>
       <View>
         <FlatList

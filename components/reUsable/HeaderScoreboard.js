@@ -17,12 +17,13 @@ const styles = StyleSheet.create({
     backgroundColor: Color.milk + 30,
     borderRadius: 12,
     marginVertical: 10,
+    paddingHorizontal: 10,
   },
   text: {
     fontWeight: '700',
     fontSize: 30,
     color: Color.milk,
-    textAlign: 'center',
+    // textAlign: 'center',
     paddingVertical: 10,
   },
 });

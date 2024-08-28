@@ -21,7 +21,7 @@ const AthleteScreen = () => {
         padding: 10,
       }}>
       <SafeAreaView style={{height: '45%'}}>
-        <View>
+        <View style={{height:'75%'}}>
           <Scoreboard data={quiz} header={'QUIZ SCOREBOARD'} />
           <Scoreboard data={guess} header={'GUESS SCOREBOARD'} />
         </View>
