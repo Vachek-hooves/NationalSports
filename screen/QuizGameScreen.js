@@ -1,6 +1,5 @@
 import {ImageBackground, ScrollView, StyleSheet, View} from 'react-native';
 import {useState} from 'react';
-import {IconReturn} from '../components/icons';
 import useQuizGame from '../hooks/useQuizGame';
 import {
   InterestingFact,

@@ -13,8 +13,10 @@ import {Color} from '../constants/colors';
 import {QuizOptions, QuizProgress, QuizQuestion} from '../components/Quiz';
 import GuessOptions from '../components/Guess/GuessOptions';
 import {QuizBtn} from '../components/ui';
+import {useSportContext} from '../store/sport_context';
 
 const GuessGameScreen = ({route, navigation}) => {
+  const {ulockNextAddScore} = useSportContext();
   const [modal, setModal] = useState(false);
   const levelId = route.params;
   const {
@@ -52,10 +54,12 @@ const GuessGameScreen = ({route, navigation}) => {
       image: guessBgImage.image,
     });
   };
+
+  const activeNextLevelCall = () => {
+    ulockNextAddScore(levelId, score, 'guess');
+  };
   const isLastQuestion = currentIndex === questionBox.length - 1;
-  // console.log(questionBox[currentIndex].answer.club);
-  // console.log(correctPerson);
-  // console.log(guessPerson);
+
   console.log(score);
   return (
     <ImageBackground
@@ -87,6 +91,14 @@ const GuessGameScreen = ({route, navigation}) => {
               <QuizBtn onPress={navigateToResultsHandler}>Results</QuizBtn>
             </View>
           )}
+          {isLastQuestion && score > 2 && showResultsButton && (
+            <TouchableOpacity onPress={activeNextLevelCall}>
+              <Text>UNLOCK NEXT LEVEL</Text>
+            </TouchableOpacity>
+          )}
+          <TouchableOpacity onPress={activeNextLevelCall}>
+            <Text>UNLOCK NEXT LEVEL</Text>
+          </TouchableOpacity>
         </ScrollView>
       </SafeAreaView>
     </ImageBackground>

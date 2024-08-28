@@ -10,7 +10,8 @@ import {
 import {MainBg} from '../components/layout';
 import {IMAGES_GUESS} from '../data/data';
 import {Color} from '../constants/colors';
-import {IconReturn} from '../components/icons';
+import {IconClose, IconReturn} from '../components/icons';
+import {useSportContext} from '../store/sport_context';
 
 const {width, height} = Dimensions.get('screen');
 const WIDTH = width * 0.8;
@@ -18,18 +19,35 @@ const HEIGHT = height * 0.09;
 const ITEM_HEIGHT = height * 0.2;
 
 const GuessListScreen = ({navigation}) => {
+  const {guess} = useSportContext();
   function renderListGuess({item}) {
+    const guessData = guess.find(gues => gues.id === item.id);
+    console.log(guessData.notLocked);
+    const lockedGame = !guessData.notLocked;
+    console.log(item);
     const id = item.id;
     return (
       <TouchableOpacity
         activeOpacity={0.6}
-        style={styles.btnStyle}
-        onPress={() => navigation.navigate('GuessGameScreen', id)}>
+        style={[
+          styles.btnStyle,
+          {borderColor: lockedGame ? 'black' : Color.milk},
+        ]}
+        onPress={() => navigation.navigate('GuessGameScreen', id)}
+        disabled={lockedGame}>
         <ImageBackground
           source={item.image}
           resizeMode="cover"
+          imageStyle={{opacity: lockedGame ? 0.3 : 1}}
           style={styles.image}>
-          <Text style={styles.text}>{item.sport}</Text>
+          {lockedGame && <IconClose />}
+          <Text
+            style={[
+              styles.text,
+              {color: lockedGame ? Color.milk + 10 : Color.milk},
+            ]}>
+            {item.sport}
+          </Text>
         </ImageBackground>
       </TouchableOpacity>
     );
@@ -60,11 +78,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   btnStyle: {
+    position: 'relative',
     marginVertical: 20,
     borderRadius: 20,
     overflow: 'hidden',
     borderWidth: 3,
-    borderColor: Color.milk,
   },
   listContent: {
     paddingBottom: 20,
@@ -72,5 +90,5 @@ const styles = StyleSheet.create({
   footer: {
     height: 10,
   },
-  text: {fontSize: 32, fontWeight: '900', color: Color.milk, letterSpacing: 8},
+  text: {fontSize: 32, fontWeight: '900', letterSpacing: 8},
 });

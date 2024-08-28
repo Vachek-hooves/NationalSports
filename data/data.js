@@ -76,6 +76,7 @@ export const IMAGES_GUESS = [
 
 export const QUIZ_DATA = [
   {
+    notLocked: true,
     score: '0',
     close: false,
     id: 'q1',
@@ -189,6 +190,7 @@ export const QUIZ_DATA = [
     ],
   },
   {
+    notLocked: false,
     score: '0',
     close: false,
     id: 'w1',
@@ -299,6 +301,7 @@ export const QUIZ_DATA = [
     ],
   },
   {
+    notLocked: false,
     score: '0',
     close: false,
     id: 'e1',
@@ -411,6 +414,7 @@ export const QUIZ_DATA = [
     ],
   },
   {
+    notLocked: false,
     score: '0',
     close: false,
     id: 'r1',
@@ -532,6 +536,7 @@ export const QUIZ_DATA = [
     ],
   },
   {
+    notLocked: false,
     score: '0',
     close: false,
     id: 't1',
@@ -657,6 +662,7 @@ export const QUIZ_DATA = [
 
 export const MATCH_DATA = [
   {
+    notLocked: true,
     score: '0',
     task: 'Choose the right coach of football club ',
     name: 'Football',
@@ -860,11 +866,12 @@ export const MATCH_DATA = [
               'https://imageio.forbes.com/i-forbesimg/media/lists/teams/juventus_416x416.jpg?format=jpg',
           },
         ],
-        answer: {person: '', club: 'Juventus'},
+        answer: {person: 'Massimiliano Allegri', club: 'Juventus'},
       },
     ],
   },
   {
+    notLocked: false,
     score: '0',
     task: 'Choose the right player of football club',
     name: 'Basketball',
@@ -1073,6 +1080,7 @@ export const MATCH_DATA = [
     ],
   },
   {
+    notLocked: false,
     score: '0',
     task: 'Who is a coach of specific football team',
     name: 'Volleyball',
@@ -1296,6 +1304,7 @@ export const MATCH_DATA = [
     ],
   },
   {
+    notLocked: false,
     score: '0',
     task: 'Match the player with baseball club',
     name: 'Baseball',
@@ -1504,6 +1513,7 @@ export const MATCH_DATA = [
     ],
   },
   {
+    notLocked: false,
     score: '0',
     task: 'Match the player with Hockey club',
     name: 'Hockey',

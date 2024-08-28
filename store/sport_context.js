@@ -32,7 +32,30 @@ export const SportProvider = ({children}) => {
     launchData();
   }, []);
 
-  const value = {quiz, guess};
+  const ulockNextAddScore = async (id, score, game) => {
+    console.log(id, score, game);
+    try {
+      const data = await getGameData(game.toString());
+      console.log(data);
+      const currentIndex = data.findIndex(item => item.id === id);
+      if (currentIndex !== -1) {
+        const updatedData = data.map((game, i) => {
+          if (i === currentIndex) {
+            return {...game, score: score};
+          } else if (i === currentIndex + 1) {
+            return {...game, notLocked: true};
+          }
+          return game;
+        });
+        console.log('fn completed');
+        console.log(`updated ${game} data`, updatedData);
+        await saveGameData(updatedData, game);
+      }
+    } catch (error) {
+      console.error('Error to update game', error);
+    }
+  };
+  const value = {quiz, guess, ulockNextAddScore};
   return (
     <SportContext.Provider value={value}>{children}</SportContext.Provider>
   );
