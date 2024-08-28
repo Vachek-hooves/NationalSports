@@ -106,9 +106,9 @@ const QuizGameScreen = ({route, navigation}) => {
               <QuizBtn onPress={navigateToResultsHandler}>Results</QuizBtn>
             </View>
           )}
-          <TouchableOpacity onPress={activeNextLevelCall}>
+          {/* <TouchableOpacity onPress={activeNextLevelCall}>
             <Text>UNLOCK NEXT LEVEL</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </ScrollView>
       </SafeAreaView>
       {/* <IconReturn /> */}

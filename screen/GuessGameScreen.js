@@ -97,9 +97,9 @@ const GuessGameScreen = ({route, navigation}) => {
               <Text>UNLOCK NEXT LEVEL</Text>
             </TouchableOpacity>
           )}
-          <TouchableOpacity onPress={activeNextLevelCall}>
+          {/* <TouchableOpacity onPress={activeNextLevelCall}>
             <Text>UNLOCK NEXT LEVEL</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </ScrollView>
       </SafeAreaView>
     </ImageBackground>

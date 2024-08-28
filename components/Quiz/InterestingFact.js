@@ -5,10 +5,15 @@ import {
   Modal,
   SafeAreaView,
   ImageBackground,
+  Dimensions,
 } from 'react-native';
 import React from 'react';
 import {QuizBtn} from '../ui';
 import {Color} from '../../constants/colors';
+
+const {width, height} = Dimensions.get('screen');
+const TOP = height * 0.1;
+const RIGHT = width * 0.1;
 
 const InterestingFact = ({visible, close, bgImage, fact}) => {
   //   console.log(fact);
@@ -19,7 +24,25 @@ const InterestingFact = ({visible, close, bgImage, fact}) => {
         source={bgImage}
         imageStyle={{opacity: 0.3}}
         resizeMode="cover">
-        <SafeAreaView style={{height: '80%', justifyContent: 'center'}}>
+        <SafeAreaView
+          style={{
+            height: '80%',
+            justifyContent: 'center',
+            // alignItemsL: 'center',
+            width: '100%',
+          }}>
+          <Text
+            style={{
+              position: 'absolute',
+              top: TOP,
+              left: RIGHT,
+              color: Color.milk,
+              fontWeight: '700',
+              fontSize: 28,
+              textAlign: 'center',
+            }}>
+            INTERESTING FACT
+          </Text>
           <View
             style={{
               backgroundColor: Color.milk,
