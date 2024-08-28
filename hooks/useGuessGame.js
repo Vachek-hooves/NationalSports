@@ -18,7 +18,7 @@ const useGuessGame = levelId => {
     nextBtnActive: false,
     showResultsButton: false,
     progress: new Animated.Value(0),
-    quizBgImage: imageObject,
+    guessBgImage: imageObject,
   });
 
   const validationCheck = choosenOption => {
@@ -44,7 +44,7 @@ const useGuessGame = levelId => {
       return {
         ...prevState,
         currentOption: choosenOption,
-        correctOption: questionBox[prevState.currentIndex].answer,
+        correctOption: questionBox[prevState.currentIndex].answer.club,
         isOptionOff: true,
         score: isCorrect ? prevState.score + 1 : prevState.score,
         nextBtnActive: !isLastQuestion, // active if not last question
@@ -56,7 +56,8 @@ const useGuessGame = levelId => {
   const nextQuestion = () => {
     setGuessState(prevState => {
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
-      if (isLastQuestion) {
+
+      if (!isLastQuestion) {
         return {
           ...prevState,
           currentIndex: prevState.currentIndex + 1,
@@ -88,6 +89,7 @@ const useGuessGame = levelId => {
       nextBtnActive: false,
       showResultsButton: false,
       progress: new Animated.Value(0),
+      guessBgImage: imageObject,
     }),
   ];
 

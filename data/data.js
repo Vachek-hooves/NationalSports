@@ -766,7 +766,7 @@ export const MATCH_DATA = [
           {
             club: 'Manchester City',
             image:
-              'https://upload.wikimedia.org/wikipedia/uk/e/eb/Manchester_City_FC_badge.svg',
+              'https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/800px-Manchester_City_FC_badge.svg.png',
           },
           {
             club: 'Atlético Madrid',
@@ -873,7 +873,7 @@ export const MATCH_DATA = [
           {
             club: 'Boston Celtics',
             image:
-              'https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCX1lht9mOcDqiNI8Tg1IkkJnG_LnIxsc2w&s',
           },
           {
             club: 'Los Angeles Lakers',
@@ -898,7 +898,7 @@ export const MATCH_DATA = [
           {
             club: 'Denver Nuggets',
             image:
-              'https://upload.wikimedia.org/wikipedia/en/7/76/Denver_Nuggets.svg',
+              'https://logowik.com/content/uploads/images/denver-nuggets5185.jpg',
           },
           {
             club: 'Milwaukee Bucks',
@@ -918,7 +918,7 @@ export const MATCH_DATA = [
           {
             club: 'Miami Heat',
             image:
-              'https://upload.wikimedia.org/wikipedia/ru/f/fb/Miami_Heat_logo.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhBSLpOPTRhHUURdhGPGT6eOv1Mn2IIaNkIw&s',
           },
           {
             club: 'Phoenix Suns',
@@ -933,7 +933,7 @@ export const MATCH_DATA = [
           {
             club: 'Denver Nuggets',
             image:
-              'https://upload.wikimedia.org/wikipedia/en/7/76/Denver_Nuggets.svg',
+              'https://logowik.com/content/uploads/images/denver-nuggets5185.jpg',
           },
           {
             club: 'Dallas Mavericks',
@@ -943,7 +943,7 @@ export const MATCH_DATA = [
           {
             club: 'Boston Celtics',
             image:
-              'https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCX1lht9mOcDqiNI8Tg1IkkJnG_LnIxsc2w&s',
           },
         ],
         answer: {person: 'Luka Dončić', club: 'Dallas Mavericks'},
@@ -973,17 +973,17 @@ export const MATCH_DATA = [
           {
             club: 'Boston Celtics',
             image:
-              'https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCX1lht9mOcDqiNI8Tg1IkkJnG_LnIxsc2w&s',
           },
           {
             club: 'Denver Nuggets',
             image:
-              'https://upload.wikimedia.org/wikipedia/en/7/76/Denver_Nuggets.svg',
+              'https://logowik.com/content/uploads/images/denver-nuggets5185.jpg',
           },
           {
             club: 'Miami Heat',
             image:
-              'https://upload.wikimedia.org/wikipedia/ru/f/fb/Miami_Heat_logo.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhBSLpOPTRhHUURdhGPGT6eOv1Mn2IIaNkIw&s',
           },
         ],
         answer: {person: 'Nikola Jokić', club: 'Denver Nuggets'},
@@ -993,7 +993,7 @@ export const MATCH_DATA = [
           {
             club: 'Boston Celtics',
             image:
-              'https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCX1lht9mOcDqiNI8Tg1IkkJnG_LnIxsc2w&s',
           },
           {
             club: 'Dallas Mavericks',
@@ -1018,7 +1018,7 @@ export const MATCH_DATA = [
           {
             club: 'Denver Nuggets',
             image:
-              'https://upload.wikimedia.org/wikipedia/en/7/76/Denver_Nuggets.svg',
+              'https://logowik.com/content/uploads/images/denver-nuggets5185.jpg',
           },
           {
             club: 'Los Angeles Lakers',
@@ -1033,7 +1033,7 @@ export const MATCH_DATA = [
           {
             club: 'Miami Heat',
             image:
-              'https://upload.wikimedia.org/wikipedia/ru/f/fb/Miami_Heat_logo.svg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhBSLpOPTRhHUURdhGPGT6eOv1Mn2IIaNkIw&s',
           },
           {
             club: 'Phoenix Suns',
@@ -1078,9 +1078,9 @@ export const MATCH_DATA = [
       {
         options: [
           {
-            club: "USA Women's National Team",
+            club: "Brazil Men's National Team",
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/United_States_women%27s_national_soccer_team_logo.svg/800px-United_States_women%27s_national_soccer_team_logo.svg.png',
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Brazil_National_Football_Team_%28no_stars%29.svg/1200px-Brazil_National_Football_Team_%28no_stars%29.svg.png',
           },
           {
             club: "USA Men's National Team",
@@ -1105,12 +1105,12 @@ export const MATCH_DATA = [
           {
             club: "Türkiye Women's National Team",
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/7/71/Roundel_flag_of_Turkey.svg',
+              'https://w7.pngwing.com/pngs/503/965/png-transparent-turkey-national-football-team-turkey-women-s-national-football-team-iran-national-football-team-the-uefa-european-football-championship-football.png',
           },
           {
             club: "Poland Men's National Team",
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/c/c9/Herb_Polski.svg',
+              'https://w7.pngwing.com/pngs/405/127/png-transparent-2018-fifa-world-cup-poland-national-football-team-england-national-football-team-polish-football-association-world-cup-team-text-team-logo.png',
           },
         ],
         answer: {
@@ -1153,7 +1153,7 @@ export const MATCH_DATA = [
           {
             club: "Türkiye Women's National Team",
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/7/71/Roundel_flag_of_Turkey.svg',
+              'https://w7.pngwing.com/pngs/503/965/png-transparent-turkey-national-football-team-turkey-women-s-national-football-team-iran-national-football-team-the-uefa-european-football-championship-football.png',
           },
         ],
         answer: {
@@ -1199,7 +1199,7 @@ export const MATCH_DATA = [
           {
             club: "Poland Men's National Team",
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/c/c9/Herb_Polski.svg',
+              'https://w7.pngwing.com/pngs/405/127/png-transparent-2018-fifa-world-cup-poland-national-football-team-england-national-football-team-polish-football-association-world-cup-team-text-team-logo.png',
           },
         ],
         answer: {person: 'John Speraw', club: "USA Men's National Team"},
@@ -1252,7 +1252,7 @@ export const MATCH_DATA = [
           {
             club: "Poland Men's National Team",
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/c/c9/Herb_Polski.svg',
+              'https://w7.pngwing.com/pngs/405/127/png-transparent-2018-fifa-world-cup-poland-national-football-team-england-national-football-team-polish-football-association-world-cup-team-text-team-logo.png',
           },
           {
             club: "France Men's National Team",
@@ -1277,7 +1277,7 @@ export const MATCH_DATA = [
           {
             club: "Poland Men's National Team",
             image:
-              'https://upload.wikimedia.org/wikipedia/commons/c/c9/Herb_Polski.svg',
+              'https://w7.pngwing.com/pngs/405/127/png-transparent-2018-fifa-world-cup-poland-national-football-team-england-national-football-team-polish-football-association-world-cup-team-text-team-logo.png',
           },
           {
             club: "Brazil Men's National Team",

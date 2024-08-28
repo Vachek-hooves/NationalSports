@@ -1,16 +1,7 @@
-import {
-  ImageBackground,
-  ScrollView,
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import {ImageBackground, ScrollView, StyleSheet, View} from 'react-native';
 import {useState} from 'react';
-import {MainBg} from '../components/layout';
 import {IconReturn} from '../components/icons';
 import useQuizGame from '../hooks/useQuizGame';
-import {useSportContext} from '../store/sport_context';
 import {
   InterestingFact,
   QuizOptions,
