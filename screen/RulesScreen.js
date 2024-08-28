@@ -68,17 +68,6 @@ const RulesScreen = () => {
             Each theme in both game modes offers unique prizes. You can earn
             these prizes by reaching high scores in the respective themes.
           </Text>
-
-          <Text></Text>
-          <Text></Text>
-          <Text></Text>
-          <Text></Text>
-          <Text></Text>
-          <Text></Text>
-          <Text></Text>
-          <Text></Text>
-          <Text></Text>
-          <Text></Text>
         </ScrollView>
       </View>
 
