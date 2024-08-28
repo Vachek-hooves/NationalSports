@@ -35,16 +35,18 @@ const GuessGameScreen = ({route, navigation}) => {
     showResultsButton,
     progress,
     guessBgImage,
+    correctPerson,
   } = guessState;
 
   const guessQuestion = thisLevel.task;
   // const question = questionBox[currentIndex].question || '';
   // const options = questionBox[currentIndex].options || [];
   const guessOptions = questionBox[currentIndex].options;
+  const guessPerson = questionBox[currentIndex].answer.person;
 
   const navigateToResultsHandler = () => {
     navigation.navigate('ResultsScreen', {
-      score,
+      score: score,
       name: thisLevel.name,
       totalQuestions: questionBox.length,
       image: guessBgImage.image,
@@ -52,6 +54,9 @@ const GuessGameScreen = ({route, navigation}) => {
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
   // console.log(questionBox[currentIndex].answer.club);
+  // console.log(correctPerson);
+  // console.log(guessPerson);
+  console.log(score);
   return (
     <ImageBackground
       source={guessBgImage.image}
@@ -65,7 +70,7 @@ const GuessGameScreen = ({route, navigation}) => {
             length={questionBox.length}
             questionNum={currentIndex + 1}
           />
-          <QuizQuestion question={guessQuestion} />
+          <QuizQuestion question={guessQuestion} correctPerson={guessPerson} />
           <GuessOptions
             options={guessOptions}
             currentOption={currentOption}
@@ -75,6 +80,12 @@ const GuessGameScreen = ({route, navigation}) => {
           />
           {!isLastQuestion && nextBtnActive && (
             <QuizBtn onPress={nextQuestion}>CONTINUE</QuizBtn>
+          )}
+          {isLastQuestion && showResultsButton && (
+            <View style={{flexDirection: 'row', flex: 1, gap: 20}}>
+              <QuizBtn onPress={restartHandle}>Restart</QuizBtn>
+              <QuizBtn onPress={navigateToResultsHandler}>Results</QuizBtn>
+            </View>
           )}
         </ScrollView>
       </SafeAreaView>

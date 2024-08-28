@@ -42,18 +42,29 @@ const GuessOptions = ({
       setSelectedOption(null);
     });
   };
-  console.log(correctOption, currentOption);
+  // console.log(correctOption, currentOption);
 
   return (
     <>
       <View style={styles.container}>
         {options.map((item, i) => {
+          const thisOption = item.club;
           return (
             <TouchableOpacity
               key={i}
               onPress={() => handlePress(item.club)}
               disabled={disabled}
-              style={styles.optionBox}>
+              style={[
+                styles.optionBox,
+                {
+                  backgroundColor:
+                    item.club == correctOption
+                      ? Color.green + 90
+                      : item.club == currentOption
+                      ? Color.red + 90
+                      : Color.milk + 20,
+                },
+              ]}>
               <Animated.View
                 style={[
                   styles.option,
@@ -63,7 +74,7 @@ const GuessOptions = ({
                 <Image
                   source={{uri: item.image}}
                   style={[styles.image]}
-                  resizeMode="cover"
+                  resizeMode="contain"
                 />
               </Animated.View>
             </TouchableOpacity>
@@ -78,7 +89,7 @@ export default GuessOptions;
 
 const styles = StyleSheet.create({
   optionBox: {
-    backgroundColor: Color.milk + 20,
+    // backgroundColor: Color.milk + 20,
     margin: 5,
     borderRadius: 12,
     borderWidth: 1,
@@ -115,10 +126,11 @@ const styles = StyleSheet.create({
   },
   text: {
     color: Color.milk,
-    fontWeight: '700',
+    fontWeight: '800',
     fontSize: 18,
     flexWrap: 'wrap',
     textAlign: 'center',
-    width:'40%'
+    width: '40%',
+    letterSpacing: 1,
   },
 });

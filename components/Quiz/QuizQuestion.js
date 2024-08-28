@@ -1,10 +1,12 @@
 import {StyleSheet, Text, View, ImageBackground} from 'react-native';
 import {Color} from '../../constants/colors';
 
-const QuizQuestion = ({question}) => {
+const QuizQuestion = ({question, correctPerson}) => {
+  // console.log(correctPerson)
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{question}</Text>
+      <Text style={styles.text}>{correctPerson}</Text>
     </View>
   );
 };

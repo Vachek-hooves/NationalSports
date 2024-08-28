@@ -6,9 +6,10 @@ import {
   SafeAreaView,
 } from 'react-native';
 import {Color} from '../constants/colors';
+import {IconReturn} from '../components/icons';
 
 const ResultsScreen = ({route}) => {
-  console.log(route.params);
+  // console.log(route.params);
   const SCORE = route.params.score;
   const IMAGE = route.params.image;
   return (
@@ -19,6 +20,7 @@ const ResultsScreen = ({route}) => {
       <SafeAreaView>
         <Text>{SCORE}</Text>
       </SafeAreaView>
+      <IconReturn />
     </ImageBackground>
   );
 };

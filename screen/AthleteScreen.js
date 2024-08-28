@@ -28,7 +28,7 @@ const AthleteScreen = () => {
       <View style={styles.prizeContainer}>
         <Text style={styles.nameText}>{item.name}</Text>
         <View style={styles.detailsContainer}>
-          <View>
+          <View style={{alignItems: 'center'}}>
             <Text style={styles.subText}>score</Text>
             <Text style={styles.scoreNum}>{score}</Text>
           </View>
@@ -37,8 +37,8 @@ const AthleteScreen = () => {
               <Image source={image[item.name]} style={styles.icon} />
             </View>
           ) : (
-            <Text style={{color: Color.milk, fontWeight: '600', fontSize: 22}}>
-              Your awards will be here
+            <Text style={{color: Color.milk, fontWeight: '600', fontSize: 12}}>
+              Your award will be here
             </Text>
           )}
         </View>

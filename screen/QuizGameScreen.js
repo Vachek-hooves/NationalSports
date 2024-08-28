@@ -51,6 +51,7 @@ const QuizGameScreen = ({route, navigation}) => {
     });
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
+  console.log(score);
 
   return (
     // <MainBg style={{alignItems: 'center'}}>

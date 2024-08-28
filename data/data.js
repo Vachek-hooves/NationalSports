@@ -68,7 +68,7 @@ export const IMAGES_GUESS = [
   {
     id: 'ho1',
     sport: 'Hockey',
-    image: require('../assets/img/quizbg/hockey.jpg'),
+    image: require('../assets/img/quizbg/hockey2.png'),
     Hockey: require('../assets/img/icons/hockeyPrize.png'),
     iconName: '',
   },
@@ -657,6 +657,7 @@ export const QUIZ_DATA = [
 
 export const MATCH_DATA = [
   {
+    score: '0',
     task: 'Choose the right coach of football club ',
     name: 'Football',
     id: 'fo1',
@@ -864,6 +865,7 @@ export const MATCH_DATA = [
     ],
   },
   {
+    score: '0',
     task: 'Choose the right player of football club',
     name: 'Basketball',
     id: 'b1',
@@ -1071,6 +1073,7 @@ export const MATCH_DATA = [
     ],
   },
   {
+    score: '0',
     task: 'Who is a coach of specific football team',
     name: 'Volleyball',
     id: 'v1',
@@ -1293,6 +1296,7 @@ export const MATCH_DATA = [
     ],
   },
   {
+    score: '0',
     task: 'Match the player with baseball club',
     name: 'Baseball',
     id: 'ba1',
@@ -1500,6 +1504,7 @@ export const MATCH_DATA = [
     ],
   },
   {
+    score: '0',
     task: 'Match the player with Hockey club',
     name: 'Hockey',
     id: 'ho1',
@@ -1591,10 +1596,18 @@ export const MATCH_DATA = [
             image:
               'https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/Pittsburgh_Penguins_logo_%282016%29.svg/800px-Pittsburgh_Penguins_logo_%282016%29.svg.png',
           },
-          {club: '', image: ''},
-          {club: '', image: ''},
+          {
+            club: 'Montreal Canadiens',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/6/69/Montreal_Canadiens.svg',
+          },
+          {
+            club: 'New York Rangers',
+            image:
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/New_York_Rangers.svg/1200px-New_York_Rangers.svg.png',
+          },
         ],
-        answer: {person: '', club: ''},
+        answer: {person: 'Carey Price', club: 'Montreal Canadiens'},
       },
       {
         options: [

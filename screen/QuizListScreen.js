@@ -31,7 +31,8 @@ const QuizListScreen = () => {
         <ImageBackground
           source={item.image}
           style={styles.image}
-          resizeMode="cover">
+          resizeMode="cover"
+          >
           <Text style={styles.text}>{item.sport}</Text>
         </ImageBackground>
       </TouchableOpacity>

@@ -8,11 +8,13 @@ const useGuessGame = levelId => {
   const thisLevel = guess.find(item => item.id === levelId) || [];
   const questionBox = thisLevel.levelQuestions;
   const imageObject = IMAGES_GUESS.find(image => image.id === levelId);
+  // console.log(questionBox[0].answer.person)
 
   const [guessState, setGuessState] = useState({
     currentIndex: 0,
     currentOption: null,
     correctOption: null,
+    correctPerson: null,
     isOptionOff: false,
     score: 0,
     nextBtnActive: false,
@@ -24,7 +26,7 @@ const useGuessGame = levelId => {
   const validationCheck = choosenOption => {
     setGuessState(prevState => {
       const isCorrect =
-        choosenOption === questionBox[prevState.currentIndex].answer;
+        choosenOption === questionBox[prevState.currentIndex].answer.club;
       const isLastQuestion = prevState.currentIndex === questionBox.length - 1;
 
       if (isLastQuestion) {
@@ -45,6 +47,7 @@ const useGuessGame = levelId => {
         ...prevState,
         currentOption: choosenOption,
         correctOption: questionBox[prevState.currentIndex].answer.club,
+        correctPerson: questionBox[prevState.currentIndex].answer.person,
         isOptionOff: true,
         score: isCorrect ? prevState.score + 1 : prevState.score,
         nextBtnActive: !isLastQuestion, // active if not last question
@@ -63,6 +66,7 @@ const useGuessGame = levelId => {
           currentIndex: prevState.currentIndex + 1,
           currentOption: null,
           correctOption: null,
+          correctPerson: null,
           isOptionOff: false,
           nextBtnActive: false,
           showResultsButton: isLastQuestion
@@ -84,6 +88,7 @@ const useGuessGame = levelId => {
       currentIndex: 0,
       currentOption: null,
       correctOption: null,
+      correctPerson: null,
       isOptionOff: false,
       score: 0,
       nextBtnActive: false,
