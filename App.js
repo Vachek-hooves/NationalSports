@@ -9,6 +9,7 @@ import {
   QuizGameScreen,
   QuizListScreen,
   ResultsScreen,
+  RulesScreen,
   SaluteScreen,
 } from './screen';
 import {SportProvider} from './store/sport_context';
@@ -37,6 +38,7 @@ function App() {
           <Stack.Screen name="GuessListScreen" component={GuessListScreen} />
           <Stack.Screen name="GuessGameScreen" component={GuessGameScreen} />
           <Stack.Screen name="ResultsScreen" component={ResultsScreen} />
+          <Stack.Screen name="RulesScreen" component={RulesScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SportProvider>

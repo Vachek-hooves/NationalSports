@@ -15,7 +15,7 @@ const HomeScreen = () => {
       </View>
       <View>
         <IconBall screen={'GameScreen'}>GAME</IconBall>
-        <IconBall>RULES</IconBall>
+        <IconBall screen={'RulesScreen'}>RULES</IconBall>
       </View>
     </MainBg>
   );
