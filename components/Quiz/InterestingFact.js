@@ -13,7 +13,7 @@ import {Color} from '../../constants/colors';
 
 const {width, height} = Dimensions.get('screen');
 const TOP = height * 0.1;
-const RIGHT = width * 0.1;
+const RIGHT = width * 0.15;
 
 const InterestingFact = ({visible, close, bgImage, fact}) => {
   //   console.log(fact);

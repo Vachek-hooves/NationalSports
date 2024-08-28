@@ -92,10 +92,10 @@ const GuessGameScreen = ({route, navigation}) => {
               <QuizBtn onPress={navigateToResultsHandler}>Results</QuizBtn>
             </View>
           )}
-          {isLastQuestion && score > 7 && showResultsButton && (
-            <TouchableOpacity onPress={activeNextLevelCall}>
-              <Text>UNLOCK NEXT LEVEL</Text>
-            </TouchableOpacity>
+          {isLastQuestion && score > 1 && showResultsButton && (
+            <>
+              <QuizBtn onPress={activeNextLevelCall}>OPEN NEXT LEVEL</QuizBtn>
+            </>
           )}
           {/* <TouchableOpacity onPress={activeNextLevelCall}>
             <Text>UNLOCK NEXT LEVEL</Text>

@@ -32,7 +32,7 @@ const AthleteScreen = () => {
             <Text style={styles.subText}>score</Text>
             <Text style={styles.scoreNum}>{score}</Text>
           </View>
-          {score > 8 ? (
+          {score >= 8 ? (
             <View style={styles.iconContainer}>
               <Image source={image[item.name]} style={styles.icon} />
             </View>
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     borderColor: Color.milk,
     paddingBottom: 5,
     // justifyContent: 'space-evently',
-    paddingHorizontal: 15,
+    paddingHorizontal: 10,
   },
   iconContainer: {
     width: 60,
