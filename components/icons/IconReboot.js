@@ -16,6 +16,7 @@ const LEFT_MARGIN = width * 0.1;
 const IconReboot = ({mode}) => {
   const {rebootGameHandler} = useSportContext();
   function rebootGameCall() {
+    // console.log(mode);
     rebootGameHandler(mode);
   }
   return (

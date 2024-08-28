@@ -20,6 +20,7 @@ const ITEM_HEIGHT = height * 0.2;
 
 const QuizListScreen = ({navigation, route}) => {
   const mode = route.params;
+  console.log('params',route.params)
   const {quiz} = useSportContext();
 
   function renderQuizList({item}) {
@@ -52,6 +53,7 @@ const QuizListScreen = ({navigation, route}) => {
       </TouchableOpacity>
     );
   }
+  
 
   return (
     <MainBg style={{alignItems: 'center'}}>

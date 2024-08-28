@@ -61,7 +61,7 @@ const QuizGameScreen = ({route, navigation}) => {
   };
   const activeNextLevelCall = () => {
     ulockNextAddScore(id, score, mode);
-    navigation.navigate('QuizListScreen');
+    navigation.navigate('QuizListScreen', mode);
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
   console.log(score);
