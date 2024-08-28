@@ -44,7 +44,7 @@ const GuessGameScreen = ({route, navigation}) => {
   // const options = questionBox[currentIndex].options || [];
   const guessOptions = questionBox[currentIndex].options;
   const guessPerson = questionBox[currentIndex].answer.person;
-  console.log(guessOptions);
+  // console.log(guessOptions);
 
   const navigateToResultsHandler = () => {
     navigation.navigate('ResultsScreen', {
@@ -61,7 +61,7 @@ const GuessGameScreen = ({route, navigation}) => {
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
 
-  console.log(score);
+  // console.log(score);
   return (
     <ImageBackground
       source={guessBgImage.image}

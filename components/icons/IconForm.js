@@ -21,7 +21,7 @@ export default IconForm;
 
 const styles = StyleSheet.create({
   icon: {
-    width: 90,
-    height: 90,
+    width: 120,
+    height: 120,
   },
 });

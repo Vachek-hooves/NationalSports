@@ -6,4 +6,5 @@ export const Color = {
   ocean: '#006989',
   green: '#06D001',
   red: '#C80036',
+  white: '#F5F7F8',
 };

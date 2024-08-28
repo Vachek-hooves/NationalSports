@@ -64,7 +64,7 @@ const QuizGameScreen = ({route, navigation}) => {
     navigation.navigate('QuizListScreen', mode);
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
-  console.log(score);
+  // console.log(score);
 
   return (
     // <MainBg style={{alignItems: 'center'}}>
