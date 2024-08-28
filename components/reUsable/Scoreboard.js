@@ -26,7 +26,7 @@ const Scoreboard = ({data, header}) => {
     } else if (header === 'GUESS SCOREBOARD') {
       setGameImages(IMAGES_GUESS);
     }
-  }, [header]);
+  }, []);
 
   function seeDetails() {
     setShowDetails(prev => !prev);
@@ -34,8 +34,12 @@ const Scoreboard = ({data, header}) => {
 
   function renderPrizeList({item}) {
     const id = item.id;
+    console.log('item-', item.name);
+
     const images = gameImages.find(image => image.id === id);
+    console.log(images);
     const score = item.score;
+    // console.log(gameImages);
 
     return (
       <View
@@ -45,15 +49,19 @@ const Scoreboard = ({data, header}) => {
           borderRadius: 12,
         }}>
         <View style={[styles.prizeContainer]}>
-          <Text style={styles.nameText}>{item.name}</Text>
           <View style={styles.detailsContainer}>
             <View style={{alignItems: 'center'}}>
               <Text style={styles.subText}>score</Text>
               <Text style={styles.scoreNum}>{score}</Text>
             </View>
-            {score >= 8 ? (
+            <Text style={styles.nameText}>{item.name}</Text>
+            {score >= 0 ? (
               <View style={styles.iconContainer}>
-                <Image source={gameImages[item.name]} style={styles.icon} />
+                {images && images[item.name] ? (
+                  <Image source={images[item.name]} style={styles.icon} />
+                ) : (
+                  <Text style={styles.noImageText}>No image available</Text>
+                )}
               </View>
             ) : (
               <Text
@@ -107,7 +115,7 @@ const styles = StyleSheet.create({
     height: 60,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 30, // це зробить подіум круглим
+    borderRadius: 30, 
     shadowColor: Color.milk,
     shadowOffset: {
       width: 2,
@@ -115,7 +123,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.6,
     shadowRadius: 7,
-    elevation: 10, // для Android, щоб зробити тінь
+   
   },
   icon: {
     width: 60,
@@ -136,12 +144,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
-    padding: 5,
+    padding: 2,
     marginVertical: 10,
+    alignItems: 'center',
   },
   scoreNum: {
     color: Color.milk,
     fontWeight: '800',
     fontSize: 28,
   },
+  noImageText: {color: Color.milk, fontWeight: '600', fontSize: 12},
 });
