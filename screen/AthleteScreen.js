@@ -1,24 +1,13 @@
-import {
-  StyleSheet,
-  View,
-  Dimensions,
-  SafeAreaView,
-  TextInput,
-  Text,
-} from 'react-native';
+import {StyleSheet, View, SafeAreaView, TextInput, Text} from 'react-native';
 import IconReturn from '../components/icons/IconReturn';
 import {Color} from '../constants/colors';
 import {useEffect, useState} from 'react';
 import ScoreBoardComponent from '../components/scroreBoard/ScoreBoardComponent';
-import LogInForm from '../components/User/LogInForm';
 import {IconForm} from '../components/icons';
 import {fetchProfile, saveProfile} from '../utils/asyncStorageUtils';
 import {PickImage} from '../components/ui';
 import FormBtn from '../components/User/formBtn';
 import UserInfo from '../components/User/UserInfo';
-
-const {width, height} = Dimensions.get('screen');
-const HEIGHT = height * 0.07;
 
 const AthleteScreen = () => {
   const [userCreated, setUserCreated] = useState(false);

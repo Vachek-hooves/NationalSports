@@ -24,7 +24,7 @@ const GuessOptions = ({
   const [scale] = useState(new Animated.Value(1));
 
   const handlePress = item => {
-    // console.log(item.club);
+
     setSelectedOption(item);
     Animated.sequence([
       Animated.timing(scale, {
@@ -42,7 +42,7 @@ const GuessOptions = ({
       setSelectedOption(null);
     });
   };
-  // console.log(correctOption, currentOption);
+
 
   return (
     <>

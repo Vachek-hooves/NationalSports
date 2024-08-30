@@ -23,9 +23,9 @@ const GuessListScreen = ({navigation, route}) => {
   const {guess} = useSportContext();
   function renderListGuess({item}) {
     const guessData = guess.find(gues => gues.id === item.id);
-    // console.log(guessData.notLocked);
+
     const lockedGame = !guessData.notLocked;
-    // console.log(item);
+
     const id = item.id;
     return (
       <TouchableOpacity

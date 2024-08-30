@@ -6,7 +6,6 @@ import {
   View,
 } from 'react-native';
 import {Color} from '../../constants/colors';
-import {useNavigation} from '@react-navigation/native';
 import {useSportContext} from '../../store/sport_context';
 
 const {height, width} = Dimensions.get('screen');
@@ -16,7 +15,6 @@ const LEFT_MARGIN = width * 0.1;
 const IconReboot = ({mode}) => {
   const {rebootGameHandler} = useSportContext();
   function rebootGameCall() {
-    // console.log(mode);
     rebootGameHandler(mode);
   }
   return (
@@ -33,8 +31,6 @@ const IconReboot = ({mode}) => {
             tintColor: Color.milk,
             width: 40,
             height: 40,
-            // alignSelf: 'flex-end',
-            // margin: 30,
           }}
         />
       </TouchableOpacity>

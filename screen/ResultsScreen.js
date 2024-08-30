@@ -9,7 +9,6 @@ import {Color} from '../constants/colors';
 import {IconReturn} from '../components/icons';
 
 const ResultsScreen = ({route}) => {
-  // console.log(route.params);
   const SCORE = route.params.score;
   const IMAGE = route.params.image;
   return (

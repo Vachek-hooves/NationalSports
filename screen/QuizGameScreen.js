@@ -45,7 +45,6 @@ const QuizGameScreen = ({route, navigation}) => {
     quizBgImage,
     readStory,
     fact,
-    // modal,
   } = generalState;
 
   const question = questionBox[currentIndex].question || '';
@@ -64,10 +63,9 @@ const QuizGameScreen = ({route, navigation}) => {
     navigation.navigate('QuizListScreen', mode);
   };
   const isLastQuestion = currentIndex === questionBox.length - 1;
-  // console.log(score);
 
   return (
-    // <MainBg style={{alignItems: 'center'}}>
+
     <ImageBackground
       source={quizBgImage.image}
       style={styles.bgImage}
@@ -111,14 +109,12 @@ const QuizGameScreen = ({route, navigation}) => {
               <QuizBtn onPress={activeNextLevelCall}>OPEN NEXT LEVEL</QuizBtn>
             </>
           )}
-          {/* <TouchableOpacity onPress={activeNextLevelCall}>
-            <Text>UNLOCK NEXT LEVEL</Text>
-          </TouchableOpacity> */}
+
         </ScrollView>
       </SafeAreaView>
-      {/* <IconReturn /> */}
+
     </ImageBackground>
-    // </MainBg>
+
   );
 };
 
