@@ -8,7 +8,7 @@ const useGuessGame = levelId => {
   const thisLevel = guess.find(item => item.id === levelId) || [];
   const questionBox = thisLevel.levelQuestions;
   const imageObject = IMAGES_GUESS.find(image => image.id === levelId);
-  console.log('useGuessGame', questionBox);
+  // console.log('useGuessGame', questionBox);
   // console.log(questionBox[0].answer.person)
 
   const [guessState, setGuessState] = useState({

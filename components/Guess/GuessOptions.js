@@ -24,7 +24,6 @@ const GuessOptions = ({
   const [scale] = useState(new Animated.Value(1));
 
   const handlePress = item => {
-
     setSelectedOption(item);
     Animated.sequence([
       Animated.timing(scale, {
@@ -42,7 +41,6 @@ const GuessOptions = ({
       setSelectedOption(null);
     });
   };
-
 
   return (
     <>
@@ -71,11 +69,11 @@ const GuessOptions = ({
                   selectedOption === item.club && {transform: [{scale}]},
                 ]}>
                 <Text style={styles.text}>{item.club}</Text>
-                <Image
+                {/* <Image
                   source={{uri: item.image}}
                   style={[styles.image]}
                   resizeMode="contain"
-                />
+                /> */}
               </Animated.View>
             </TouchableOpacity>
           );
@@ -94,6 +92,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
     borderColor: Color.milk,
+    marginVertical: 15,
   },
   option: {
     // alignItems: 'center',
@@ -104,12 +103,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 5,
     // width: '80%',
-    flexDirection: 'row',
+    // flexDirection: 'row',
     gap: 30,
     width: 300,
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     // borderRadius: 12,
     // overflow: 'hidden',
+    paddingVertical: 25,
   },
   container: {
     flex: 1,
@@ -127,10 +127,10 @@ const styles = StyleSheet.create({
   text: {
     color: Color.milk,
     fontWeight: '800',
-    fontSize: 18,
+    fontSize: 28,
     flexWrap: 'wrap',
     textAlign: 'center',
-    width: '40%',
+    // width: '40%',
     letterSpacing: 1,
   },
 });

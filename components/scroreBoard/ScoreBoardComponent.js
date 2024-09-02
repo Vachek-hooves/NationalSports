@@ -5,7 +5,7 @@ import Scoreboard from '../reUsable/Scoreboard';
 const {width, height} = Dimensions.get('screen');
 const HEIGHT = height * 0.07;
 const MAX_HEIGHT = height * 0.25;
-console.log(MAX_HEIGHT);
+// console.log(MAX_HEIGHT);
 
 const ScoreBoardComponent = () => {
   const {quiz, guess} = useSportContext();
