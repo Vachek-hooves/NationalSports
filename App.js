@@ -10,12 +10,51 @@ import {
   QuizListScreen,
   ResultsScreen,
   RulesScreen,
-  SaluteScreen,
 } from './screen';
 import {SportProvider} from './store/sport_context';
+import {useEffect, useRef, useState} from 'react';
+import {Animated, View} from 'react-native';
+
 const Stack = createNativeStackNavigator();
 
+const loaders = [
+  require('./assets/img/mainbg/loader1.png'),
+  require('./assets/img/mainbg/loader2.png'),
+];
+
 function App() {
+  const [id, setItem] = useState(0);
+  const animation = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    fadeStart();
+    const timeOut = setTimeout(() => {
+      navigateToMenu();
+    }, 6000);
+    return () => clearTimeout(timeOut);
+  }, []);
+  const fadeStart = () => {
+    Animated.timing(animation, {
+      toValue: 1,
+      duration: 1500,
+      useNativeDriver: true,
+    }).start(() => fadeFinish());
+  };
+
+  const fadeFinish = () => {
+    Animated.timing(animation, {
+      toValue: 0,
+      duration: 1500,
+      useNativeDriver: true,
+    }).start(() => {
+      setItem(prevState => prevState + 1);
+      fadeStart();
+    });
+  };
+  const navigateToMenu = () => {
+    setItem(2);
+  };
+
   return (
     <SportProvider>
       <NavigationContainer>
@@ -25,12 +64,22 @@ function App() {
             animation: 'fade',
             animationDuration: 400,
           }}>
-          <Stack.Screen name="SaluteScreen" component={SaluteScreen} />
-          <Stack.Screen
-            name="HomeScreen"
-            component={HomeScreen}
-            // options={{animation: 'fade', animationDuration: 1500}}
-          />
+          {id < 2 ? (
+            <Stack.Screen name="Hello" options={{headerShown: false}}>
+              {() => (
+                <View style={{flex: 1}}>
+                  <Animated.Image
+                    source={loaders[id]}
+                    style={[
+                      {width: '100%', flex: 1},
+                      {opacity: animation},
+                    ]}></Animated.Image>
+                </View>
+              )}
+            </Stack.Screen>
+          ) : (
+            <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          )}
           <Stack.Screen name="AthleteScreen" component={AthleteScreen} />
           <Stack.Screen name="GameScreen" component={GameScreen} />
           <Stack.Screen name="QuizListScreen" component={QuizListScreen} />
