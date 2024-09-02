@@ -1,4 +1,11 @@
-import {StyleSheet, View, SafeAreaView, TextInput, Text} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  SafeAreaView,
+  TextInput,
+  Text,
+  ImageBackground,
+} from 'react-native';
 import IconReturn from '../components/icons/IconReturn';
 import {Color} from '../constants/colors';
 import {useEffect, useState} from 'react';
@@ -53,7 +60,9 @@ const AthleteScreen = () => {
   };
 
   return (
-    <View style={styles.mainContainer}>
+    <ImageBackground
+      style={styles.mainContainer}
+      source={require('../assets/img/mainbg/bcgr.png')}>
       <SafeAreaView style={{height: 450}}>
         {user ? (
           <>
@@ -87,7 +96,7 @@ const AthleteScreen = () => {
       </SafeAreaView>
       {userCreated && <ScoreBoardComponent />}
       <IconReturn />
-    </View>
+    </ImageBackground>
   );
 };
 
@@ -95,7 +104,7 @@ export default AthleteScreen;
 
 const styles = StyleSheet.create({
   // positioning: {alignItems: 'center', height: '100%', marginTop: 100},
-  mainContainer: {backgroundColor: Color.blue, flex: 1, padding: 10},
+  mainContainer: {flex: 1, padding: 10},
   subText: {color: Color.blue, fontSize: 22, fontWeight: '600'},
   container: {
     backgroundColor: Color.white,

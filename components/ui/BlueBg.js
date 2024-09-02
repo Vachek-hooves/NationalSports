@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: Color.blue,
     flex: 1,
-    opacity: 0.9,
+    // opacity: 0.9,
   },
 });
